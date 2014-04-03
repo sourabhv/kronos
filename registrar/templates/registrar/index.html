@@ -1,0 +1,13 @@
+{% extends "registrar/base.html" %}
+
+{% block title %}Register | {% endblock title %}
+
+{% block content %}
+<div class="form">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit">
+    </form>
+</div>
+{% endblock content %}

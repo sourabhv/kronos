@@ -118,7 +118,7 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = ()
 
 LOCAL_APPS = (
-    'registrar'
+    'registrar',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

@@ -1,8 +1,7 @@
 from django.conf.urls import patterns, url
 
-from .views import index, thanks
+from .views import index
 
 urlpatterns = patterns('',
-    url(r'^thanks', thanks, name='thanks'),
-    url(r'^', index, name='index'),
+    url(r'^$', index, name='index'),
 )

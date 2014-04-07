@@ -1,13 +1,71 @@
 {% extends "registrar/base.html" %}
+{% load registrar_extras %}
 
 {% block title %}Register | {% endblock title %}
 
 {% block content %}
-<div class="form">
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit">
-    </form>
-</div>
+    {% if applicant %}
+        <div class="confirm-message">
+            Thank you for your submission, {{ applicant.name|get_first }}.
+        </div>
+    {% endif %}
+
+    <table class="form">
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            <tbody>
+                <tr>
+                    <td><label for="id_name">Name</label></td>
+                    <td>{{ form.name }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="error">{{ form.name.errors }}</td>
+                </tr>
+
+                <tr>
+                    <td><label for="id_semester">Semester</label></td>
+                    <td>{{ form.semester }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="error">{{ form.semester.errors }}</td>
+                </tr>
+
+                <tr>
+                    <td><label for="id_exprienced_in_python">Exprienced in python</label></td>
+                    <td>{{ form.exprienced_in_python }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="error">{{ form.exprienced_in_python.errors }}</td>
+                </tr>
+
+                <tr>
+                    <td><label for="id_phone_number">Phone number</label></td>
+                    <td>{{ form.phone_number }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="error">{{ form.phone_number.errors }}</td>
+                </tr>
+
+                <tr>
+                    <td><label for="id_email">Email</label></td>
+                    <td>{{ form.email }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="error">{{ form.email.errors }}</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </tbody>
+
+        </form>
+    </table>
 {% endblock content %}

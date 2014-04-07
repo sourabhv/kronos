@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock title %}Pygame Workshop</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif|Voltaire' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
 </head>
 <body>
-    {% block header %}
-    <h1>By C&lt;&gt;ntagious</h1>
-    {% endblock header %}
+    <header>
+        {% block header %}
+            <h1>C&lt;&gt;NTAGIOUS</h1>
+        {% endblock header %}
+    </header>
 
-    {% block content %}{% endblock content %}
+    <div id="content">
+        {% block content %}{% endblock content %}
+    </div>
 
-    {% block footer %}{% endblock footer %}
-
+    <footer>
+        {% block footer %}{% endblock footer %}
+    </footer>
 </body>
 </html>

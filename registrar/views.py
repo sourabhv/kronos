@@ -1,18 +1,26 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.core.urlresolvers import reverse
 
 from .forms import ApplicantForm
 
 def index(request):
-    form = ApplicantForm(request.POST or None)
 
-    if form.is_valid():
-        form.save()
-        return HttpResponseRedirect('/thanks')
+    if request.method == 'GET':
+        form = ApplicantForm()
+        return render(request, 'registrar/index.html', {'form': form})
+    elif request.method == 'POST':
+        form = ApplicantForm(request.POST)
+        if form.is_valid():
+            applicantObj = form.save()
+            return render(request, 'registrar/index.html', {
+                'form': ApplicantForm(),
+                'applicant': applicantObj,
+            })
+        else:
+            return render(request, 'registrar/index.html', {
+                'form': ApplicantForm(request.POST),
+            })
 
-    return render(request, 'registrar/index.html', {
-        'form': form
-        })
 
-def thanks(request):
-    return render(request, 'registrar/thanks.html', {})
+

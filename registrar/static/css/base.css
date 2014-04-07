@@ -1,0 +1,28 @@
+body * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Droid Sans'
+}
+
+header h1 {
+    font-weight: normal;
+    font-size: 3em;
+    font-family: "Voltaire";
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+table {
+    margin: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+td.error ul {
+    list-style: none;
+    padding-left: 0;
+}

@@ -1,18 +1,59 @@
+* {margin:0; padding:0;}
 body * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
          -o-box-sizing: border-box;
             box-sizing: border-box;
+    height: 100%;
     font-family: 'Droid Sans'
 }
 
-header h1 {
+header {
+    top: 0;
+    height: 100px;
+    padding: 40px;
     font-weight: normal;
-    font-size: 3em;
+    font-size: 1em;
     font-family: "Voltaire";
+    margin-bottom: 40px;
+    -moz-box-shadow:    0 1px 10px 1px #ccc;
+    -webkit-box-shadow: 0 1px 10px 1px #ccc;
+    box-shadow:         0 1px 10px 1px #ccc;
+}
+header > h1 {
+    width: 300px;
+}
+nav {
+    width: 300px;
+    margin: 0;
+    float: right;
+}
+nav > .item {
+    padding: 20px;
+}
+.content {
+    min-height:100%;
+    margin-bottom: -70px;
+}
+.confirm-message {
+    width: 520px;
+    margin: auto;
+}
+.codecha {
+    width: 520px;
+    margin: auto;
+}
+.form-holder {
+    width: 520px;
+    margin: auto;
+}
+footer p{
+    padding: 1em;
+    height: 80px;
+    color: white;
+    background-color: #414141;
     text-align: center;
-    margin: 40px 0 20px;
 }
 
 table {

@@ -21,5 +21,11 @@
         </footer>
 	</div>
     <script src="{{ STATIC_URL }}js/script.js"></script>
+    <script>
+        function redirect_to_next_page() {
+            window.location.href = "pyworkshop/";
+        }
+        setTimeout(redirect_to_next_page, 8000);
+    </script>
 </body>
 </html>

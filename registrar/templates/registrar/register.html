@@ -5,70 +5,79 @@
 
 {% block content %}
     {% if applicant %}
-        <center>
-            <div class="confirm-message">Thank you for your submission, {{ applicant.name|get_first }}.</div>
-        </center>
+        <div class="confirm-message">
+            <p>Thank you for your submission, {{ applicant.name|get_first }}.</p>
+            <p>Now that you are signed up, we suggest you read more about what will
+                happen during the workshop <a href="faq/">here</a>.
+            </p>
+        </div>
     {% endif %}
 
     <form method="POST" action="">
         {% csrf_token %}
 
-        <center><script type="text/javascript" src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c"></script></center>
+        <div class="codecha">
+            <p>Grab a front row seat in our workshop and also get a goodie by solving this programming puzzle</p>
+            <script type="text/javascript" src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c"></script>
+        </div>
 
-        <table class="form">
-            <tbody>
-                <tr>
-                    <td><label for="id_name">Name *</label></td>
-                    <td>{{ form.name }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.name.errors }}</td>
-                </tr>
+        <div class="form-holder">
+            <p>Or you can always be a part simply by filling this form.</p>
+            <table class="form">
+                <tbody>
+                    <tr>
+                        <td><label for="id_name">Name *</label></td>
+                        <td>{{ form.name }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="error">{{ form.name.errors }}</td>
+                    </tr>
 
-                <tr>
-                    <td><label for="id_semester">Semester *</label></td>
-                    <td>{{ form.semester }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.semester.errors }}</td>
-                </tr>
+                    <tr>
+                        <td><label for="id_semester">Semester *</label></td>
+                        <td>{{ form.semester }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="error">{{ form.semester.errors }}</td>
+                    </tr>
 
-                <tr>
-                    <td><label for="id_exprienced_in_python">Exprienced in python</label></td>
-                    <td>{{ form.exprienced_in_python }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.exprienced_in_python.errors }}</td>
-                </tr>
+                    <tr>
+                        <td><label for="id_exprienced_in_python">Exprienced in python</label></td>
+                        <td>{{ form.exprienced_in_python }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="error">{{ form.exprienced_in_python.errors }}</td>
+                    </tr>
 
-                <tr>
-                    <td><label for="id_phone_number">Phone number</label></td>
-                    <td>{{ form.phone_number }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.phone_number.errors }}</td>
-                </tr>
+                    <tr>
+                        <td><label for="id_phone_number">Phone number</label></td>
+                        <td>{{ form.phone_number }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="error">{{ form.phone_number.errors }}</td>
+                    </tr>
 
-                <tr>
-                    <td><label for="id_email">Email *</label></td>
-                    <td>{{ form.email }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.email.errors }}</td>
-                </tr>
+                    <tr>
+                        <td><label for="id_email">Email *</label></td>
+                        <td>{{ form.email }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="error">{{ form.email.errors }}</td>
+                    </tr>
 
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Submit"></td>
-                </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Submit"></td>
+                    </tr>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
 
     </form>
 {% endblock content %}

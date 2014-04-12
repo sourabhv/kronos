@@ -5,18 +5,20 @@
 
 {% block content %}
     {% if applicant %}
-        <div class="confirm-message">
-            Thank you for your submission, {{ applicant.name|get_first }}.
-        </div>
+        <center>
+            <div class="confirm-message">Thank you for your submission, {{ applicant.name|get_first }}.</div>
+        </center>
     {% endif %}
 
-    <table class="form">
-        <form method="POST" action="">
-            {% csrf_token %}
+    <form method="POST" action="">
+        {% csrf_token %}
 
+        <center><script type="text/javascript" src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c"></script></center>
+
+        <table class="form">
             <tbody>
                 <tr>
-                    <td><label for="id_name">Name</label></td>
+                    <td><label for="id_name">Name *</label></td>
                     <td>{{ form.name }}</td>
                 </tr>
                 <tr>
@@ -25,7 +27,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="id_semester">Semester</label></td>
+                    <td><label for="id_semester">Semester *</label></td>
                     <td>{{ form.semester }}</td>
                 </tr>
                 <tr>
@@ -52,7 +54,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="id_email">Email</label></td>
+                    <td><label for="id_email">Email *</label></td>
                     <td>{{ form.email }}</td>
                 </tr>
                 <tr>
@@ -64,8 +66,9 @@
                     <td></td>
                     <td><input type="submit" value="Submit"></td>
                 </tr>
-            </tbody>
 
-        </form>
-    </table>
+            </tbody>
+        </table>
+
+    </form>
 {% endblock content %}

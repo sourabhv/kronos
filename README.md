@@ -6,12 +6,12 @@ A Django Registration app to be used for online user registration for "Introduct
 Quick Start
 -----------
 
-You shuold be able to get started with:
+You should be able to get started with:
 
     $ git clone git@github.com:sourabhv/pygameWorkshopRegistration.git
     $ cd pygameWorkshopRegistration 
     
-    # configure you're database
+    # configure your database (sample here- https;//daste.de/ej1d )
     $ vim pygameWorkshopRegistration/settings/local.py
 
     # start the django server
@@ -33,4 +33,6 @@ Next, please follow the following everytime before you start working
 
     $ git fetch upstream
     $ git checkout master
-    $ git merge  upstream/master
+    $ git merge upstream/master
+
+Happy hacking!

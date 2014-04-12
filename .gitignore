@@ -3,7 +3,7 @@
 *.db
 
 # Ignore the local user settings
-# pygameWorkshopRegistration/settings/local.py
+pygameWorkshopRegistration/settings/local.py
 
 # Ignore vim backup files
 *.swp

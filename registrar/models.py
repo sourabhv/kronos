@@ -19,7 +19,7 @@ class Applicant(models.Model):
     solved_puzzle        = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['name', 'semester']
+        ordering = ['-solved_puzzle', 'name', 'semester']
 
     def __unicode__(self):
         return self.name

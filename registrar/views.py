@@ -23,10 +23,11 @@ def register(request):
 
             # submit the form
             if form.is_valid():
-                # set the boolean field if codecha is solved.
-                if codecha_passed(request):
-                    Applicant.solved_puzzle = True
-                applicantObj = form.save()
+                # set solved_puzzle to value from codecha_passed
+                applicantObj = form.save(commit=False)
+                applicantObj.solved_puzzle = codecha_passed(request)
+                applicantObj.save()
+
                 return render(request, 'registrar/register.html', {
                     'form': ApplicantForm(),
                     'applicant': applicantObj,

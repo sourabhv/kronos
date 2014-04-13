@@ -7,3 +7,6 @@ pygameWorkshopRegistration/settings/local.py
 
 # Ignore vim backup files
 *.swp
+
+# staticfiles dir
+staticfiles

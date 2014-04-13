@@ -5,8 +5,39 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
 
+from registrar.models import Applicant
 from .forms import ApplicantForm
 
+def index(request):
+    """Renders the home page for contagious."""
+    return render(request, 'registrar/index.html')
+
+def register(request):
+    """ Returns the registration page."""
+    if request.method == 'GET':
+        form = ApplicantForm()
+        return render(request, 'registrar/register.html', {'form': form})
+
+    elif request.method == 'POST':
+            form = ApplicantForm(request.POST)
+
+            # set the boolean field if codecha is solved.
+            if codecha_passed(request):
+                Applicant.solved_puzzle = True
+            # submit the form
+            if form.is_valid():
+                applicantObj = form.save()
+                return render(request, 'registrar/register.html', {
+                    'form': ApplicantForm(),
+                    'applicant': applicantObj,
+                })
+            else:
+                return render(request, 'registrar/register.html', {
+                    'form': ApplicantForm(request.POST),
+                })
+
+
+# Codecha code
 def codecha_passed(request):
     codecha_challenge = request.POST.get('codecha_challenge_field', False)
     codecha_response  = request.POST.get('codecha_response_field', False)
@@ -35,20 +66,3 @@ def __get_ip(request):
 
     return ip
 
-def index(request):
-
-    if request.method == 'GET':
-        form = ApplicantForm()
-        return render(request, 'registrar/index.html', {'form': form})
-    elif request.method == 'POST':
-            form = ApplicantForm(request.POST)
-            if form.is_valid() and codecha_passed(request):
-                applicantObj = form.save()
-                return render(request, 'registrar/index.html', {
-                    'form': ApplicantForm(),
-                    'applicant': applicantObj,
-                })
-            else:
-                return render(request, 'registrar/index.html', {
-                    'form': ApplicantForm(request.POST),
-                })

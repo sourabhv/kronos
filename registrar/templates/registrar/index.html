@@ -1,74 +1,31 @@
-{% extends "registrar/base.html" %}
-{% load registrar_extras %}
-
-{% block title %}Register | {% endblock title %}
-
-{% block content %}
-    {% if applicant %}
-        <center>
-            <div class="confirm-message">Thank you for your submission, {{ applicant.name|get_first }}.</div>
-        </center>
-    {% endif %}
-
-    <form method="POST" action="">
-        {% csrf_token %}
-
-        <center><script type="text/javascript" src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c"></script></center>
-
-        <table class="form">
-            <tbody>
-                <tr>
-                    <td><label for="id_name">Name *</label></td>
-                    <td>{{ form.name }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.name.errors }}</td>
-                </tr>
-
-                <tr>
-                    <td><label for="id_semester">Semester *</label></td>
-                    <td>{{ form.semester }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.semester.errors }}</td>
-                </tr>
-
-                <tr>
-                    <td><label for="id_exprienced_in_python">Exprienced in python</label></td>
-                    <td>{{ form.exprienced_in_python }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.exprienced_in_python.errors }}</td>
-                </tr>
-
-                <tr>
-                    <td><label for="id_phone_number">Phone number</label></td>
-                    <td>{{ form.phone_number }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.phone_number.errors }}</td>
-                </tr>
-
-                <tr>
-                    <td><label for="id_email">Email *</label></td>
-                    <td>{{ form.email }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="error">{{ form.email.errors }}</td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Submit"></td>
-                </tr>
-
-            </tbody>
-        </table>
-
-    </form>
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contagious | Coming Soon</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+			<div id="lt"><span>&lt;</span></div>
+			<div id="name"><span>Contagious</span></div>
+			<div id="gt"><span>&gt;</span></div>
+		</div>
+        <footer>
+        <!-- TODO: figure out how to render for subdomains from django
+            <a href="http://python.contagious.co.in/">...</a>
+        -->
+        <a href="pyworkshop/">...</a>
+        </footer>
+	</div>
+    <script src="{{ STATIC_URL }}js/script.js"></script>
+    <script>
+        function redirect_to_next_page() {
+            window.location.href = "pyworkshop/";
+        }
+        setTimeout(redirect_to_next_page, 8000);
+    </script>
+</body>
+</html>

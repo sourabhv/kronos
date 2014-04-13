@@ -16,6 +16,7 @@ class Applicant(models.Model):
     exprienced_in_python = models.BooleanField(default=False)
     phone_number         = models.CharField(max_length=10, blank=True)
     email                = models.EmailField()
+    solved_puzzle        = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['name', 'semester']

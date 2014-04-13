@@ -1,63 +1,81 @@
-* {margin:0; padding:0;}
+* { margin:0; padding:0; }
+
 body * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
          -o-box-sizing: border-box;
             box-sizing: border-box;
-    height: 100%;
     font-family: 'Droid Sans'
 }
 
 header {
-    top: 0;
+    margin-bottom: 40px;
+    padding: 30px 40px;
     height: 100px;
-    padding: 40px;
     font-weight: normal;
     font-size: 1em;
     font-family: "Voltaire";
-    margin-bottom: 40px;
     -moz-box-shadow:    0 1px 10px 1px #ccc;
     -webkit-box-shadow: 0 1px 10px 1px #ccc;
     box-shadow:         0 1px 10px 1px #ccc;
 }
+
 header > h1 {
-    width: 300px;
     font-family: "Voltaire";
     font-weight: normal;
     font-size: 35px;
+    float: left
 }
+
 nav {
+    padding-top: 10px;
     width: 300px;
     margin: 0;
     float: right;
 }
+
 nav > .item {
     padding: 20px;
 }
-.content {
-    min-height:100%;
-    margin-bottom: -70px;
+
+#content {
+    min-height: 537px;
 }
+
 .confirm-message {
+    margin: 0 auto 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
     width: 520px;
-    margin: auto;
 }
+
+.confirm-message p {
+    margin: 10px 0;
+}
+
 .codecha {
     margin: 0 auto 20px;
     padding-bottom: 20px;
     border-bottom: 2px solid gray;
     width: 520px;
 }
+
 .codecha p {
     margin-bottom: 20px;
 }
+
+#codecha_widget {
+    margin: 0 auto;
+}
+
 .form-holder {
     width: 520px;
     margin: auto;
 }
+
 footer p {
-    padding: 1em;
+    padding: 2em 1em;
     height: 80px;
     color: white;
     background-color: #414141;

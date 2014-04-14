@@ -80,24 +80,32 @@ nav > .item:hover {
     margin: auto;
 }
 
+.form-holder p {
+    margin: 20px 0;
+}
+
+/*
+****************************************
+-------  form css here
+****************************************
+*/
+
+.errorlist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.errorlist li {
+    font-style: italic;
+    font-size: 12px;
+}
+
 footer p {
     padding: 2em 1em;
     height: 80px;
     color: white;
     background-color: #414141;
     text-align: center;
-}
-
-table {
-    margin: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-
-td.error ul {
-    list-style: none;
-    padding-left: 0;
 }
 
 .heart {

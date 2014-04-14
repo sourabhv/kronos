@@ -37,7 +37,13 @@ nav {
 
 nav > .item {
     padding: 20px;
+    text-decoration: none;
 }
+
+nav > .item:hover {
+    padding: 20px;
+    text-decoration: underline;
+ }
 
 #content {
     min-height: 537px;

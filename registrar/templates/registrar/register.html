@@ -24,52 +24,67 @@
 
         <div class="form-holder">
             <p>Or you can always be a part simply by filling this form.</p>
-            <table class="form">
+            <table>
                 <tbody>
                     <tr>
                         <td><label for="id_name">Name *</label></td>
                         <td>{{ form.name }}</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td class="error">{{ form.name.errors }}</td>
-                    </tr>
+
+                    {% if  form.errors %}
+                        <tr>
+                            <td></td>
+                            <td class="error">{{ form.name.errors }}</td>
+                        </tr>
+                    {% endif %}
 
                     <tr>
                         <td><label for="id_semester">Semester *</label></td>
                         <td>{{ form.semester }}</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td class="error">{{ form.semester.errors }}</td>
-                    </tr>
+
+                    {% if  form.errors %}
+                        <tr>
+                            <td></td>
+                            <td class="error">{{ form.semester.errors }}</td>
+                        </tr>
+                    {% endif %}
 
                     <tr>
                         <td><label for="id_exprienced_in_python">Exprienced in python</label></td>
                         <td>{{ form.exprienced_in_python }}</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td class="error">{{ form.exprienced_in_python.errors }}</td>
-                    </tr>
+
+                    {% if  form.errors %}
+                        <tr>
+                            <td></td>
+                            <td class="error">{{ form.exprienced_in_python.errors }}</td>
+                        </tr>
+                    {% endif %}
 
                     <tr>
                         <td><label for="id_phone_number">Phone number</label></td>
                         <td>{{ form.phone_number }}</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td class="error">{{ form.phone_number.errors }}</td>
-                    </tr>
+
+                    {% if  form.errors %}
+                        <tr>
+                            <td></td>
+                            <td class="error">{{ form.phone_number.errors }}</td>
+                        </tr>
+                    {% endif %}
 
                     <tr>
                         <td><label for="id_email">Email *</label></td>
                         <td>{{ form.email }}</td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td class="error">{{ form.email.errors }}</td>
-                    </tr>
+
+                    {% if  form.errors %}
+                        <tr>
+                            <td></td>
+                            <td class="error">{{ form.email.errors }}</td>
+                        </tr>
+                    {% endif %}
 
                     <tr>
                         <td></td>

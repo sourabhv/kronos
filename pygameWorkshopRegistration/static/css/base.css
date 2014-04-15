@@ -3,15 +3,20 @@
 -------  global styles here
 ****************************************
 */
+/*@font-face {*/
+  /*font-family: 'Aaux ProLight';*/
+  /*src: url('Aaux ProLight.ttf') format('truetype');*/
+/*}*/
 
 * { margin:0; padding:0; }
 
 html, body {
     height: 100%;
     /*border-top: 2px solid #9DCB09;*/
-    font-family: 'Droid Sans';
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
     background-color: #FFFFFF;
 }
+
 
 header {
     height: auto;
@@ -71,7 +76,8 @@ footer p {
     color: white;
     background-color: #414141;
     text-align: center;
-    font-family: 'Aaux ProLight', 'Droid Sans', sans-serif;
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
+    font-weight: 300;
     font-size: 18px;
 }
 
@@ -91,6 +97,7 @@ footer p {
     max-width: 620px;
     min-height: 100%;
     margin-bottom: -80px;
+    font-weight: 300;
 }
 
 #content:after {
@@ -105,8 +112,8 @@ footer, #content:after {
 
 #content h1 {
     color: #1ECD97;
-    font-family: 'Voltaire', 'Droid Sans', sans-serif;
-    font-weight: normal;
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
+    font-weight: 400;
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 20px;
@@ -139,8 +146,8 @@ footer, #content:after {
 }
 
 .codecha p {
-    color: #aaa;
-    font-family: 'Aaux ProLight';
+    color: #414141;
+    font-family: 'Lato','Aaux ProLight', sans-serif;
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
@@ -156,14 +163,17 @@ footer, #content:after {
     background-color: white;
     padding: 20px 50px;
     border-radius: 3px;
+    font-weight: 300;
 }
 
 .form-holder p {
     margin: 20px 0 30px;
     position: relative;
-    font-family: 'Aaux ProLight';
+    color: #414141;
+    font-family: 'Lato','Aaux ProLight', sans-serif;
+    font-weight: 300;
     font-size: 18px;
-    color: #aaa;
+    text-align: center;
 }
 
 .form-holder label,
@@ -184,7 +194,7 @@ footer, #content:after {
     padding: 1em 1.3em;
     width: 100%;
     color: #414141;
-    font-family: 'Aaux ProRegular', sans-serif;
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
     font-size: 14px;
 }
 

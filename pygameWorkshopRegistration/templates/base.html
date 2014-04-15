@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock title %}Pygame Workshop</title>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif|Voltaire' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Voltaire' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
+    {% block extra_header %}{% endblock extra_header %}
 </head>
 <body>
     <header>
@@ -25,7 +26,12 @@
 
     <footer>
         {% block footer %}{% endblock footer %}
-        <p>&copy; 2014 Contagious. Made with <span class="heart">&hearts;</span> on our computers :)</p.>
+        <p class="logo">
+        <img src="{{ STATIC_URL }}images/logo.png" alt="logo" width="100px"
+        height="100px"/><br><br>
+        Made with <span class="heart">&hearts;</span> on our computers
+        :)</p>
+        <p>&copy; 2014 Contagious.</p.>
     </footer>
 </body>
 </html>

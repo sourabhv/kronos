@@ -3,19 +3,24 @@
 -------  global styles here
 ****************************************
 */
+/*@font-face {*/
+  /*font-family: 'Aaux ProLight';*/
+  /*src: url('Aaux ProLight.ttf') format('truetype');*/
+/*}*/
 
 * { margin:0; padding:0; }
 
 html, body {
     height: 100%;
-    border-top: 2px solid #9DCB09;
-    font-family: 'Droid Sans';
-    background-color: #edeae9;
+    /*border-top: 2px solid #9DCB09;*/
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
+    background-color: #FFFFFF;
 }
+
 
 header {
     height: auto;
-    padding: 20px 40px;
+    padding: 25px 40px;
     width: auto;
     font-weight: normal;
     font-size: 1em;
@@ -24,13 +29,14 @@ header {
     /*-moz-box-shadow:    0 1px 10px 1px #ccc;*/
     /*-webkit-box-shadow: 0 1px 10px 1px #ccc;*/
     /*box-shadow:         0 1px 10px 1px #ccc;*/
-    background: white;
+    background: #F7F7F7;
 }
 
 header > h1 {
+    color: #777777;
     font-family: "Voltaire";
     font-weight: normal;
-    font-size: 35px;
+    font-size: 48px;
     float: left;
     margin: -5px auto auto 30px;
 }
@@ -46,32 +52,39 @@ nav {
 nav > a.item {
     padding: 10px;
     margin: -10px 5px;
-    color: #414141;
+    color: #777777;
     /*color: #46b1a6;*/
     text-decoration: none;
     display: inline-block;
+    border: 1px solid transparent;
     border-radius: 5px;
 }
 
 nav > .item:hover {
-    color: #BADA55;
-    /*color: #FFFFFF;*/
-    background-color: #414141;
+    /*color: #BADA55;*/
+    border: 1px solid #777777;
  }
 
 .clear { clear: both; }
 .heart { font-weight: bold; }
 
 footer p {
-    padding: 2em 1em;
+    padding: 1em;
     height: 80px;
     height: auto;
     width: auto;
     color: white;
     background-color: #414141;
     text-align: center;
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
 }
 
+.logo {
+    border-bottom: 1px solid #383838;
+    padding: 2em 1em;
+}
 /*
 ****************************************
 -------  main content here
@@ -80,10 +93,11 @@ footer p {
 
 #content {
     margin: auto;
-    padding: 50px 0;
+    padding: 50px 0 100px;
     max-width: 620px;
     min-height: 100%;
     margin-bottom: -80px;
+    font-weight: 300;
 }
 
 #content:after {
@@ -97,8 +111,11 @@ footer, #content:after {
 }
 
 #content h1 {
-    font-family: 'Voltaire', 'Droid Sans', sans-serif;
-    font-weight: normal;
+    color: #1ECD97;
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -124,20 +141,16 @@ footer, #content:after {
     margin: 0 auto 20px;
     padding: 30px 50px;
     padding-bottom: 20px;
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 3px;
 }
 
 .codecha p {
+    color: #414141;
+    font-family: 'Lato','Aaux ProLight', sans-serif;
+    font-size: 18px;
+    text-align: center;
     margin-bottom: 20px;
-}
-
-#codecha_widget {
-    margin: 0 auto 20px;
-}
-
-#codecha_about {
-    display: none;
 }
 
 /*
@@ -150,18 +163,25 @@ footer, #content:after {
     background-color: white;
     padding: 20px 50px;
     border-radius: 3px;
+    font-weight: 300;
 }
 
 .form-holder p {
-    margin: 20px 0;
+    margin: 20px 0 30px;
     position: relative;
+    color: #414141;
+    font-family: 'Lato','Aaux ProLight', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
 }
 
 .form-holder label,
 .form-holder input,
 .form-holder select {
+    text-align: left;
     display: block;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .form-holder input, select {
@@ -173,7 +193,8 @@ footer, #content:after {
 
     padding: 1em 1.3em;
     width: 100%;
-    font-family: monospace;
+    color: #414141;
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
     font-size: 14px;
 }
 
@@ -187,18 +208,19 @@ footer, #content:after {
 
 .form-holder input[type=text]:focus {
     outline: 0;
-    border: 3px solid #35739d;
+    border: 3px solid #1BC5A3;
 }
 
 .form-holder input[type=submit] {
-    background: #35739d;
-    border: 2px solid #ccc;
+    background: #1BC5A3;
+    border: 2px solid #1BC5A3;
     border-radius: 3px;
     color: white;
     /*width: 398px;*/
     cursor: pointer;
     font-family: 'Voltaire', sans-serif;
     font-size: 18px;
+    text-align: center;
 }
 
 .form-holder select {
@@ -208,23 +230,27 @@ footer, #content:after {
     outline: none;
     background: #F3F3F3;
     width: 100%;
-    padding: 10px 2%;
+    padding: 17px 2%;
     border: none;
     border: 3px solid transparent;
     font-size: 1em;
     cursor: pointer;
+    /*remove the dropdown arrow for mozilla*/
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
 
 }
 
 .form-holder select:focus {
-    border: 3px solid #35739d;
+    border: 3px solid #1BC5A3;
 }
 
 .form-holder .down-arrow {
     content: '&#9660;';
     position: absolute;
     right: 20px;
-    bottom: 15px;
+    bottom: 20px;
     color: #bbb;
     font-size: 16px;
 }
@@ -235,6 +261,7 @@ footer, #content:after {
 }
 
 .errorlist li {
+    color: #FB797E;
     font-style: italic;
     font-size: 12px;
 }

@@ -6,6 +6,7 @@
 {% block content %}
     {% if applicant %}
         <div class="confirm-message">
+            <h1>Cool! All done!</h1>
             <p>Thank you for your submission, {{ applicant.name|get_first }}.</p>
             <p>Now that you are signed up, we suggest you read more about what will
                 happen during the workshop <a href="faq/">here</a>.
@@ -18,39 +19,45 @@
         {% csrf_token %}
 
         <div class="codecha">
+            <h1>Get the front seat</h1>
             <p>Grab a front row seat in our workshop and also get a goodie by solving this programming puzzle</p>
             <script type="text/javascript" src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c"></script>
         </div>
 
+
         <div class="form-holder">
+            <h1>Yay! Backbenchers!</h1>
+
             <p>Or you can always be a part simply by filling this form.</p>
 
             <p>
-                <label for="id_name">Name *</label> <br>
+                <label for="id_name">Name <span>*</span></label>
                 {{ form.name }}
                 {% if form.errors %} {{ form.name.errors }} {% endif %}
             </p>
 
             <p>
-                <label for="id_semester">Semester *</label>
+                <label for="id_semester">Semester <span>*</span></label>
                 {{ form.semester }}
+                <span class="down-arrow">&#9660;</span>
                 {% if form.errors %} {{ form.semester.errors }} {% endif %}
             </p>
 
             <p>
-                <label for="id_exprienced_in_python">Exprienced in python</label>
-                {{ form.exprienced_in_python }}
-                {% if form.errors %} {{ form.exprienced_in_python.errors }} {% endif %}
+                <label for="id_exprienced_in_python">Python Exprience <span>*</span></label>
+                {{ form.python_exprience }}
+                <span class="down-arrow">&#9660;</span>
+                {% if form.errors %} {{ form.python_exprience.errors }} {% endif %}
             </p>
 
             <p>
-                <label for="id_phone_number">Phone number</label> <br>
+                <label for="id_phone_number">Phone number</label>
                 {{ form.phone_number }}
                 {% if form.errors %} {{ form.phone_number.errors }} {% endif %}
             </p>
 
             <p>
-                <label for="id_email">Email *</label> <br>
+                <label for="id_email">Email <span>*</span></label>
                 {{ form.email }}
                 {% if form.errors %} {{ form.email.errors }} {% endif %}
             </p>

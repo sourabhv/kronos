@@ -6,6 +6,7 @@
 {% block content %}
     {% if applicant %}
         <div class="confirm-message">
+            <h1>Cool! All done!</h1>
             <p>Thank you for your submission, {{ applicant.name|get_first }}.</p>
             <p>Now that you are signed up, we suggest you read more about what will
                 happen during the workshop <a href="faq/">here</a>.
@@ -18,13 +19,16 @@
         {% csrf_token %}
 
         <div class="codecha">
+            <h1>Get the front seat</h1>
             <p>Grab a front row seat in our workshop and also get a goodie by solving this programming puzzle</p>
             <script type="text/javascript" src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c"></script>
         </div>
 
-        <p>Or you can always be a part simply by filling this form.</p>
 
         <div class="form-holder">
+            <h1>Yay! Backbenchers!</h1>
+
+            <p>Or you can always be a part simply by filling this form.</p>
 
             <p>
                 <label for="id_name">Name <span>*</span></label>

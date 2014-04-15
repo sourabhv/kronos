@@ -10,6 +10,7 @@ html, body {
     height: 100%;
     border-top: 2px solid #9DCB09;
     font-family: 'Droid Sans';
+    background-color: #edeae9;
 }
 
 header {
@@ -20,9 +21,10 @@ header {
     font-size: 1em;
     font-family: "Voltaire";
     text-align: center;
-    -moz-box-shadow:    0 1px 10px 1px #ccc;
-    -webkit-box-shadow: 0 1px 10px 1px #ccc;
-    box-shadow:         0 1px 10px 1px #ccc;
+    /*-moz-box-shadow:    0 1px 10px 1px #ccc;*/
+    /*-webkit-box-shadow: 0 1px 10px 1px #ccc;*/
+    /*box-shadow:         0 1px 10px 1px #ccc;*/
+    background: white;
 }
 
 header > h1 {
@@ -70,7 +72,6 @@ footer p {
     text-align: center;
 }
 
-
 /*
 ****************************************
 -------  main content here
@@ -79,8 +80,8 @@ footer p {
 
 #content {
     margin: auto;
-    padding: 80px 0;
-    max-width: 520px;
+    padding: 50px 0;
+    max-width: 620px;
     min-height: 100%;
     margin-bottom: -80px;
 }
@@ -95,11 +96,24 @@ footer, #content:after {
     height: 80px;
 }
 
+#content h1 {
+    font-family: 'Voltaire', 'Droid Sans', sans-serif;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
 .confirm-message {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
     margin: 0 auto 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid gray;
-    width: 520px;
+    padding: 20px 50px;
+    width: 620px;
+    border-radius: 3px;
+    background-color: white;
 }
 
 .confirm-message p {
@@ -108,8 +122,10 @@ footer, #content:after {
 
 .codecha {
     margin: 0 auto 20px;
+    padding: 30px 50px;
     padding-bottom: 20px;
-    border-bottom: 2px solid gray;
+    background-color: white;
+    border-radius: 3px;
 }
 
 .codecha p {
@@ -117,7 +133,11 @@ footer, #content:after {
 }
 
 #codecha_widget {
-    margin: 0 auto;
+    margin: 0 auto 20px;
+}
+
+#codecha_about {
+    display: none;
 }
 
 /*
@@ -126,7 +146,13 @@ footer, #content:after {
 ****************************************
 */
 
-form p, .form-holder p {
+.form-holder {
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 3px;
+}
+
+.form-holder p {
     margin: 20px 0;
     position: relative;
 }

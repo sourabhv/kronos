@@ -203,6 +203,8 @@ footer, #content:after {
 
 .form-holder select {
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     outline: none;
     background: #F3F3F3;
     width: 100%;

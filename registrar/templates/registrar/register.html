@@ -2,6 +2,9 @@
 {% load registrar_extras %}
 
 {% block title %}Register | {% endblock title %}
+{% block extra_header %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/widget.css" />
+{% endblock extra_header %}
 
 {% block content %}
     {% if applicant %}
@@ -21,7 +24,8 @@
         <div class="codecha">
             <h1>Get the front seat</h1>
             <p>Grab a front row seat in our workshop and also get a goodie by solving this programming puzzle</p>
-            <script type="text/javascript" src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c"></script>
+            <script type="text/javascript"
+                src="//codecha.org/api/challenge?k=249835902ccd4c46936d94a8fa0c2e7c&skip_css"></script>
         </div>
 
 
@@ -44,7 +48,7 @@
             </p>
 
             <p>
-                <label for="id_exprienced_in_python">Python Exprience <span>*</span></label>
+                <label for="id_exprienced_in_python">Python Experience <span>*</span></label>
                 {{ form.python_exprience }}
                 <span class="down-arrow">&#9660;</span>
                 {% if form.errors %} {{ form.python_exprience.errors }} {% endif %}

@@ -1,4 +1,7 @@
-#codeca_widget, #codecha_error_overlay, #codecha_error_overlay, #codecha_error_overlay_hide, #codecha_error_message, #codecha_wording, #codecha_code_area, #codecha_spinner, #codecha_status, #codecha_code_submit_button, #codecha_bottom {
+#codeca_widget, #codecha_error_overlay, #codecha_error_overlay,
+#codecha_error_overlay_hide, #codecha_error_message,
+#codecha_wording, #codecha_code_area, #codecha_spinner,
+#codecha_status, #codecha_code_submit_button, #codecha_bottom {
     padding: 0;
     margin: 0;
 }
@@ -72,7 +75,7 @@
 
 .codecha_button:hover, .codecha_button:active, .codecha_button:disabled {
     background: #4b5056;
-    border-color:#4b5056; 
+    border-color:#4b5056;
 }
 
 #codecha_survey_mark_selector {
@@ -128,24 +131,56 @@
 /*******************************
  * custom styles for codecha
  * ****************************/
+
 #codecha_widget {
     margin: 0 auto 20px;
     padding: 10px;
+    text-align: center;
+}
+
+#codecha_widget * {
+    text-align: left;
+}
+
+#codecha_widget strong {
+    font-weight: normal;
+    color: #414141;
+}
+
+#codecha_error_overlay {
+    background: #4b5056;
+    color: white;
+    border-radius: 3px
+}
+
+#codecha_error_overlay_hide {
+    color: #ddd !important;
+}
+
+#codecha_wording {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    /*margin: 10px;*/
+    padding: 10px;
+    font-family: 'Lato';
+
 }
 
 #codecha_about {
     display: none;
 }
 
-#codecha_wording {
-    margin: 10px;
-    padding: 10px;
-    font-family: 'Aaux ProRegular';
-}
-
-#codecha_button {
+.codecha_button {
     border: 2px solid #1BC5A3;
     background: #1BC5A3;
     padding: 10px !important;
-
 }
+
+#codecha_language_selector {
+    padding: .6em 1.3em;
+    width: auto;
+}
+

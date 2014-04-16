@@ -3,10 +3,13 @@
 -------  global styles here
 ****************************************
 */
-/*@font-face {*/
-  /*font-family: 'Aaux ProLight';*/
-  /*src: url('Aaux ProLight.ttf') format('truetype');*/
-/*}*/
+
+/*
+@font-face {
+  font-family: 'Aaux ProLight';
+  src: url('Aaux ProLight.ttf') format('truetype');
+}
+*/
 
 * { margin:0; padding:0; }
 
@@ -264,4 +267,14 @@ footer, #content:after {
     color: #FB797E;
     font-style: italic;
     font-size: 12px;
+}
+
+/*
+****************************************
+-------  404 page style
+****************************************
+*/
+
+.page-error {
+    text-align: center;
 }

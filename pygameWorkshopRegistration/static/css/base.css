@@ -76,9 +76,24 @@ nav > .item:hover {
 .clear { clear: both; }
 .heart { font-weight: bold; }
 
+#content {
+    margin: 0 auto;
+    min-height: 100%;
+    margin-bottom: -279px;
+}
+
+#content:after {
+    content: "";
+    display: block;
+}
+
+/****** for the sticky footer    */
+footer, #content:after {
+    height: 279px;
+}
+
 footer p {
     padding: 1em;
-    height: 80px;
     height: auto;
     width: auto;
     color: white;
@@ -92,200 +107,6 @@ footer p {
 .logo {
     border-bottom: 1px solid #383838;
     padding: 2em 1em;
-}
-/*
-****************************************
--------  main content here
-****************************************
-*/
-
-#content {
-    margin: auto;
-    padding: 50px 0 100px;
-    max-width: 620px;
-    min-height: 100%;
-    margin-bottom: -80px;
-    font-weight: 300;
-}
-
-#content:after {
-    content: "";
-    display: block;
-}
-
-/****** for the sticky footer    */
-footer, #content:after {
-    height: 80px;
-}
-
-#content h1 {
-    color: #1ECD97;
-    font-family: 'Lato', 'Aaux ProLight', sans-serif;
-    font-weight: 400;
-    text-transform: capitalize;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.confirm-message {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-
-    margin: 0 auto 20px;
-    padding: 20px 50px;
-    width: 620px;
-    border-radius: 3px;
-    background-color: white;
-}
-
-.confirm-message p {
-    margin: 10px 0;
-}
-
-.codecha {
-    margin: 0 auto 20px;
-    padding: 30px 50px;
-    padding-bottom: 20px;
-    background-color: #FFFFFF;
-    border-radius: 3px;
-}
-
-.codecha p {
-    color: #414141;
-    font-family: 'Lato','Aaux ProLight', sans-serif;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/*
-****************************************
--------  form css here
-****************************************
-*/
-
-.form-holder {
-    background-color: white;
-    padding: 20px 50px;
-    border-radius: 3px;
-    font-weight: 300;
-}
-
-.form-holder p {
-    margin: 20px 0 30px;
-    position: relative;
-    color: #414141;
-    font-family: 'Lato','Aaux ProLight', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: center;
-}
-
-.form-holder label,
-.form-holder input,
-.form-holder select {
-    text-align: left;
-    display: block;
-    margin: 20px 0;
-}
-
-.form-holder input, select {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-
-    padding: .6em 1em;
-    /*padding: 1em 1.3em;*/
-    width: 100%;
-    color: #414141;
-    font-family: 'Lato', 'Aaux ProLight', sans-serif;
-    font-size: 14px;
-
-    -webkit-transition: border .15s linear, background .15s linear, color .15s linear;
-    -moz-transition:    border .15s linear, background .15s linear, color .15s linear;
-    -ms-transition:     border .15s linear, background .15s linear, color .15s linear;
-    -o-transition:      border .15s linear, background .15s linear, color .15s linear;
-    transition:         border .15s linear, background .15s linear, color .15s linear;
-}
-
-.form-holder input[type=text] {
-    border: none;
-    border: 3px solid transparent;
-    background-color: #F3F3F3;
-    font-size: 1em;
-    letter-spacing: 1px;
-}
-
-.form-holder input[type=text]:focus {
-    outline: 0;
-    border: 3px solid #1BC5A3;
-}
-
-.form-holder input[type=submit] {
-    background: #1BC5A3;
-    border: 2px solid #1BC5A3;
-    border-radius: 3px;
-    color: white;
-    /*width: 398px;*/
-    cursor: pointer;
-    font-family: 'Voltaire', sans-serif;
-    font-size: 18px;
-    text-align: center;
-}
-
-.form-holder input[type=submit]:hover,
-.form-holder input[type=submit]:focus {
-    outline: 0;
-    color: #1BC5A3;
-    background-color: white;
-}
-
-.form-holder select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    background: #F3F3F3;
-    width: 100%;
-    border: none;
-    border: 3px solid transparent;
-    font-size: 1em;
-    cursor: pointer;
-    /*remove the dropdown arrow for mozilla*/
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-
-}
-
-.form-holder select:focus {
-    border: 3px solid #1BC5A3;
-}
-
-.form-holder .down-arrow {
-    content: '&#9660;';
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    /*bottom: 20px;*/
-    color: #bbb;
-    font-size: 16px;
-}
-
-.errorlist {
-    list-style: none;
-    padding-left: 0;
-}
-
-.errorlist li {
-    color: #FB797E;
-    font-style: italic;
-    font-size: 12px;
 }
 
 /*

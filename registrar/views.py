@@ -8,9 +8,11 @@ from django.core.urlresolvers import reverse
 from registrar.models import Applicant
 from .forms import ApplicantForm
 
+
 def index(request):
     """Renders the home page for contagious."""
     return render(request, 'registrar/index.html')
+
 
 def register(request):
     """ Returns the registration page."""
@@ -38,8 +40,14 @@ def register(request):
                 })
 
 
+def about(request):
+    "Renders the about page"
+    return render(request, 'registrar/about.html', {})
+
+
 # Codecha code
 def codecha_passed(request):
+    "requests the codecha api for codecha challange status (failure/success)"
     codecha_challenge = request.POST.get('codecha_challenge_field', False)
     codecha_response  = request.POST.get('codecha_response_field', False)
 

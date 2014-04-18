@@ -4,6 +4,7 @@
 {% block title %}Register | {% endblock title %}
 {% block extra_header %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/widget.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/register.css">
 {% endblock extra_header %}
 
 {% block content %}
@@ -12,7 +13,7 @@
             <h1>Cool! All done!</h1>
             <p>Thank you for your submission, {{ applicant.name|get_first }}.</p>
             <p>Now that you are signed up, we suggest you read more about what will
-                happen during the workshop <a href="faq/">here</a>.
+                happen during the workshop <a href="{% url "registrar:about" %}">here</a>.
             </p>
             <p>Or go ahead and register someone else ...</p>
         </div>

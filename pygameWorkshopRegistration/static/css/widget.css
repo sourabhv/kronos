@@ -70,7 +70,7 @@
 }
 
 .codecha_button, a.codecha_button, a.codecha_button:hover, a.codecha_button:visited {
-    color: #fff !important;
+    color: #fff;
 }
 
 .codecha_button:hover, .codecha_button:active, .codecha_button:disabled {
@@ -184,3 +184,22 @@
     width: auto;
 }
 
+#codecha_change_challenge,
+#codecha_code_submit_button {
+    -webkit-transition: background .15s linear, color .15s linear;
+    -moz-transition: background .15s linear, color .15s linear;
+    -ms-transition: background .15s linear, color .15s linear;
+    -o-transition: background .15s linear, color .15s linear;
+    transition: background .15s linear, color .15s linear;
+}
+
+#codecha_change_challenge:hover,
+#codecha_change_challenge:focus,
+#codecha_code_submit_button:hover,
+#codecha_code_submit_button:focus {
+    outline: 0;
+    color: #1BC5A3;
+    background-color: white;
+    border: 2px solid #1BC5A3;
+
+}

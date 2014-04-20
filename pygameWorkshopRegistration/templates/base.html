@@ -5,6 +5,7 @@
     <title>{% block title %}{% endblock title %}Pygame Workshop</title>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Voltaire' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     {% block extra_header %}{% endblock extra_header %}
 </head>
 <body>
@@ -12,9 +13,9 @@
         {% block header %}
             <h1>C&lt;&gt;NTAGIOUS</h1>
             <nav>
-                <a href="/" class="item">Home</a>
-                <a href="about/" class="item">about</a>
-                <a href="workshop/" class="item">workshop</a>
+                <a href="{% url "registrar:index" %}" class="item">Home</a>
+                <a href="{% url "registrar:about" %}" class="item">about</a>
+                <a href="{% url "registrar:register" %}" class="item">workshop</a>
             </nav>
             <div class="clear"></div>
         {% endblock header %}

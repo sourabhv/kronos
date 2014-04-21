@@ -11,7 +11,7 @@ You should be able to get started with:
     $ git clone git@github.com:sourabhv/pygameWorkshopRegistration.git
     $ cd pygameWorkshopRegistration 
     
-    # configure your database (sample here- https://dpaste.de/ej1d )
+    # configure your database (sample here- http://pastebin.com/ZVsQn7Mn)
     $ vim pygameWorkshopRegistration/settings/local.py
 
     # start the django server

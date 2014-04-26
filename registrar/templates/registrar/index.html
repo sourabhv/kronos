@@ -22,10 +22,12 @@
 	</div>
     <script src="{{ STATIC_URL }}js/script.js"></script>
     <script>
-        function redirect_to_next_page() {
-            window.location.href = "pyworkshop/";
-        }
-        setTimeout(redirect_to_next_page, 20000);
+        document.getElementById('name').getElementsByTagName('a')[0].focus();
+
+        // function redirect_to_next_page() {
+        //     window.location.href = "pyworkshop/";
+        // }
+        // setTimeout(redirect_to_next_page, 20000);
     </script>
 </body>
 </html>

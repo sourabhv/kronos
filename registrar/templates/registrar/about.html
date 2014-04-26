@@ -42,25 +42,58 @@
                     <li>import pygame; print pygame.version.ver</li>
                 </ul>
 
-                <p>If you get something like <code>1.9.1release</code> then Voila! everything works.</p>
+                <p>If you get something like <code>1.9.Xrelease</code> (where X is any number) then Voila! everything works.</p>
                 <p>Congratulations! You're all ready for the big day.</p>
             </div>
             <div>
                 <h2 class="noscript">Linux</h2>
-                <p>For this, we'll assume you are using a linux distro that uses apt package manager. Linux comes pre-installed with python but wel'll go through this anyway in case you removed it or its an old version.</p>
-                <p>Open up your terminal ( <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>T</kbd> ) and copy/paste the following (without the $ of course):</p>
+                <!--
+                So you found out about our little secret, sherlock?
 
-                <ul class="code terminal">
-                    <li>sudo apt-get install build-essetials</li>
-                    <li>sudo add-apt-repository ppa:fkrull/deadsnakes</li>
-                    <li>sudo apt-get update</li>
-                    <li>sudo apt-get install python2.7</li>
-                </ul>
-                <p>And now, let's install python-pygame</p>
+                All right! We'll help you get through this. This is going to be a little extra descriptive so hold on to your seats! We will only cover debian based distros (like Ubuntu, mint, crunchbang, etc), so if you're on any other distro, you should definately know what to do yourself ...
+
+                Go on now, what are you waiting for? Open up your terminal!
+
+                Now type these commands in your terminal (don't copy the $)
+
+                    $ sudo apt-get install build-essetials
+
+                This will install all the tools you need to build python from source on your system.
+
+                    $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+
+                This installs all the dependencies of python like sqlite (an ultralight database), readline (for python file interaction) etc. Now lets get python's source
+
+                    $ cd ~/Downloads
+                    $ wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+
+                Now lets extract the tarball
+
+                    $ tar -xvf Python-2.7.5.tgz
+                    $ cd Python-2.7.5
+
+                And now lets build the source (using make) and install it (using make install)
+
+                    $ ./configure
+                    $ make
+                    $ sudo make install
+
+                And now test it with this:
+
+                    $ python -c "import sys; print sys.version"
+                -->
+
+                <p>If you are using Linux (woohoo!) then you already know what to do and how to do it, so we'll leave all the work for you <span class="smiley">:) </span> But still if you get stuck somewhere, you can either ask the <a href="https://www.google.com/#q=how+to+do+stuff+that+i+shouldn't+be+asking+help+for" target="_blank">almighty Google</a> for help or (even better) <code>use the source!</code> (another riddle? Great!)</p>
+
+                <p><center>. . .</center></p>
+
+                <p>So you're done, eh? Good work! Now let's install pygame. In your terminal, type this:</p>
 
                 <ul class="code terminal">
                     <li>sudo apt-get install python-pygame</li>
                 </ul>
+
+                <i>Note: If your os doesn't use apt, search for pygame in official repositories</i>
 
                 <p>When its complete, in the terminal, type this:</p>
 
@@ -68,7 +101,7 @@
                     <li>python2.7 -c "import pygame; print pygame.version.ver"</li>
                 </ul>
 
-                <p>If you get something like <code>1.9.1release</code>, then congratulations, you're all set!</p>
+                <p>If you get something like <code>1.9.Xrelease</code> (where X is any number), then congratulations, you're all set!</p>
 
             </div>
             <div>
@@ -79,7 +112,7 @@
                     <li>python -c "import sys; print (sys.version)"</li>
                 </ul>
 
-                <p>If it says <code>2.7.X</code> then you have correct version of python. If it says something like <code>3.X.X</code> or gives an error, then python's missing. Read on to know how to install it.</p>
+                <p>If it says <code>2.7.X</code> then you have correct version of python and you can skip to end of this section and install pygame now. If it says something like <code>3.X.X</code> or gives an error, then python's missing. Read on to know how to install it.</p>
 
                 <p>You can install python by downloading disk images for <a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6-macosx10.6.dmg">x64 OSX</a> (10.6+) or <a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6-macosx10.3.dmg">x86 OSX</a> (OSX 10.3+) and install it. If it works, you can skip to end of section. If if didn't work then, read on!</p>
 
@@ -104,7 +137,7 @@
                     <li>brew install python</li>
                 </ul>
 
-                <p>Finally, you can <a href="http://pygame.org/ftp/pygame-1.9.1release-python.org-32bit-py2.7-macosx10.3.dmg">download</a> pygame's disk image and install it. Phew!</p>
+                <p>Finally, you can <a href="http://pygame.org/ftp/pygame-1.9.Xrelease-python.org-(where X is any number) 32bit-py2.7-macosx10.3.dmg">download</a> pygame's disk image and install it. Phew!</p>
 
             </div>
         </div>

@@ -50,6 +50,7 @@
 }
 
 #content code {
+    margin: 0 3px;
     padding: 3px 5px;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
@@ -69,6 +70,16 @@
     background-color: #f7f7f7;
 }
 
+#content span.smiley {
+    margin: 0 7px;
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
 #content ul.dwnld-links {
     text-align: center;
 }
@@ -79,7 +90,7 @@
 }
 
 #content ul.code {
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 5px 10px;
     width: 65%;
     min-width: 500px;

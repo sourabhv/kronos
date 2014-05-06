@@ -1,9 +1,7 @@
 import os
 
 from .codecha import Codecha
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from django.core.urlresolvers import reverse
 
 from registrar.models import Applicant
 from .forms import ApplicantForm
@@ -74,4 +72,3 @@ def __get_ip(request):
         ip = request.META.get('REMOTE_ADDR')
 
     return ip
-

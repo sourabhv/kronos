@@ -995,6 +995,15 @@ legend {
     div.subnav .nav>li:last-child>a {
         border-radius: 0 0 4px 4px;
     }
+    .nav-collapse {
+        float: left !important;
+    }
+    .nav-collapse p {
+        padding: 0 0 0 8px !important;
+        float: none !important;
+        display: block !important;
+    }
+
 }
 
 @media(max-width:979px) {
@@ -1007,6 +1016,12 @@ legend {
 
     .navbar .nav-collapse .nav>li>a:hover {
         background-color: #18bc9c;
+    }
+    .nav-collapse {
+        float: left !important;
+    }
+    .nav-collapse p:first-child {
+        padding-left: 8px;
     }
 }
 
@@ -1042,4 +1057,13 @@ legend {
 
 #submenu li {
     padding: 5px 0;
+}
+
+.nav-collapse {
+    float: right;
+}
+
+.nav-collapse p {
+    float: left;
+    padding: 0 20px;
 }

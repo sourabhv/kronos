@@ -103,6 +103,11 @@ ROOT_URLCONF = 'pygameWorkshopRegistration.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'pygameWorkshopRegistration.wsgi.application'
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+)
+
 TEMPLATE_DIRS = (
     root('templates'),
 )
@@ -116,13 +121,15 @@ DJANGO_APPS = (
     'django.contrib.admin',
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+    'flat_admin',
+)
 
 LOCAL_APPS = (
     'registrar',
 )
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+INSTALLED_APPS =  THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

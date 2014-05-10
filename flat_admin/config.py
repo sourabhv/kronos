@@ -8,8 +8,8 @@ def default_config():
         'VERSION': VERSION,
 
         # configurable
-        'ADMIN_NAME': 'Django Flat Admin',
-        'ADMIN_DOMAIN': 'EggForSale.com',
+        'ADMIN_NAME': 'C<>NTAGIOUS',
+        'ADMIN_DOMAIN': 'contagious.co.in',
         'HEADER_DATE_FORMAT': 'l, jS F Y',
         'HEADER_TIME_FORMAT': 'H:i',
 

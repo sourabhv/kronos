@@ -56,13 +56,7 @@
                                 <a href="{% url 'admin:index' %}" class="brand">
                                     {% block branding %}{{ 'ADMIN_NAME'|flat_admin_config }}{% endblock %}
                                 </a>
-                                {% if request.user.is_authenticated %}
-                                    <div id="apps-block" class="span2 pull-left">
-                                        <a id="apps" href="#" class="btn btn-primary" data-toggle="popover"
-                                           data-content='{% include 'flat_admin/menu.html' %}'
-                                           data-original-title="Apps &amp; Models">Apps</a>
-                                    </div>
-                                {% endif %}
+
                                 <div class="nav-collapse collapse">
                                     {% block header_time %}
                                         <p class="navbar-text pull-left">
@@ -105,7 +99,7 @@
             {% endblock %}
 
             <div class="container-fluid">
-                <div class="row-fluid">
+                <div class="row-fluid" id="padder">
                     <!-- START Main -->
                     {% block content-center %}
                         <div class="span12">
@@ -167,7 +161,6 @@
 </div>
 
 <script src="{% static 'flat_admin/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'flat_admin/js/jquery.tweet.js' %}"></script>
 <script>
     $('#apps').popover({placement: "bottom", html: true});
 </script>

@@ -1,5 +1,6 @@
 {% extends "admin/base_site.html" %}
 {% load i18n admin_static %}
+{% load i18n flat_admin_menu %}
 
 {% block extrastyle %}
     {{ block.super }}
@@ -15,6 +16,41 @@
     <div id="content-main">
         <div class="row-fluid">
             <div class="span6">
+                <div class="tabbable tabs-left">
+                    <ul class="nav nav-tabs">
+                        {% get_menu request as app_list %}
+                        {% if app_list %}
+                            {% for app in app_list %}
+                                <li{{ app.is_active|yesno:' class=active,' }}>
+                                    <a href="#{{ app.label }}" data-toggle="tab">
+                                        <i class="{% firstof app.icon 'icon-chevron-right' %} icon-black"></i>
+                                        {% trans app.label|capfirst %}</a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                    <div class="tab-content" id="submenu">
+                        {% get_menu request as app_list %}
+                        {% if app_list %}
+                            {% for app in app_list %}
+                                <div class="tab-pane {{ app.is_active|yesno:' active,' }}" id="{{ app.label }}">
+                                    {% if app.models %}
+                                        <ul class="unstyled">
+                                            {% for model in app.models %}
+                                                <li{{ model.is_active|yesno:' class=active,' }}>
+                                                    <a
+                                                        href="{{ model.url }}"><i class="{% firstof app.icon 'icon-chevron-right' %} icon-black"></i> {{ model.label }}</a> <a href="{{ model.url }}add/"
+                                                        ><i
+                                                        class="icon-plus-sign icon-black"></i></a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                </div>
 
             </div>
             <div class="span6">

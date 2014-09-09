@@ -8,5 +8,5 @@ urlpatterns = patterns('',
     url(r'^pyworkshop/about/$', about, name='about'),
     url(r'^home/$',home, name='home'),
     url(r'^worshop:dropbox/$',dropbox, name='dropbox'),
-    url(r'^workshop:pygame/$',pygame,name='pygame'),    
+    url(r'^workshop:pygame/$',pygame,name='pygame'),
 )

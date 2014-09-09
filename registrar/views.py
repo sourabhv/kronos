@@ -52,7 +52,7 @@ def dropbox(request):
 
 def pygame(request):
     "Renders the Pygame workshop"
-    return render(request,'registrar/pygame.html',{})         
+    return render(request,'registrar/pygame.html',{})
 
 # Codecha code
 def codecha_passed(request):

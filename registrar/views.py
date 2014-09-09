@@ -46,6 +46,14 @@ def home(request):
     "Renders the home page"
     return render(request,'registrar/home.html',{})
 
+def dropbox(request):
+    "Renders the dropbox workshop"
+    return render(request,'registrar/dropbox.html',{})
+
+def pygame(request):
+    "Renders the Pygame workshop"
+    return render(request,'registrar/pygame.html',{})         
+
 # Codecha code
 def codecha_passed(request):
     "requests the codecha api for codecha challange status (failure/success)"

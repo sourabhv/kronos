@@ -1,0 +1,78 @@
+#Large {
+	margin: 0.20em 0 0 ;
+    text-align: center;
+    font-family: 'Voltaire';
+    font-weight: normal;
+    color: #144955;
+    font-size: 8em;
+
+}
+
+#small {
+	text-align: center;
+    font-family: 'Voltaire';
+    font-weight: normal;
+    color: #144955;
+    font-size: 2em;
+    
+}
+
+.tile-container{
+  margin-left:130px;
+  
+  width:250px;
+  height:120px;
+  background:#F7F7F7;
+  overflow:hidden;
+  display:inline-block;
+}
+
+.tile-container:hover > .tile{
+  -webkit-transform: translate(0px,-100%);
+  -moz-transform: translate(0px,-100%);
+  -o-transform: translate(0px,-100%);
+  transform: translate(0px,-100%);
+}
+
+.tile{
+  background:inherit;
+  width:inherit;
+  height:inherit;
+  float:left;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;  
+}
+.workshop-image{
+  margin-top:20px;
+  margin-left:10px;
+  float:left;
+  height:80px;
+  width:80px;   
+}
+.workshop-text{
+  margin-left:10px;
+  
+  display:inline-block;
+  color:#777777;
+  font-family:Voltaire, arial, sans-serif;
+  font-size:20px;
+}
+
+.longtext
+{
+margin-top:20px;
+font-size:25px;
+}
+
+.first
+{
+margin-top:40px;
+}
+
+.workshop-text span{
+  padding-left:10px;
+  display:block;
+}
+

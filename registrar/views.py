@@ -42,6 +42,17 @@ def about(request):
     "Renders the about page"
     return render(request, 'registrar/about.html', {})
 
+def home(request):
+    "Renders the home page"
+    return render(request,'registrar/home.html',{})
+
+def dropbox(request):
+    "Renders the dropbox workshop"
+    return render(request,'registrar/dropbox.html',{})
+
+def pygame(request):
+    "Renders the Pygame workshop"
+    return render(request,'registrar/pygame.html',{})         
 
 # Codecha code
 def codecha_passed(request):

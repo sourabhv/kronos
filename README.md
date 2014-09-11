@@ -11,7 +11,7 @@ You should be able to get started with:
     $ git clone git@github.com:sourabhv/kronos.git
     $ cd kronos
 
-    # configure your database (sample here- https://dpaste.de/ej1d )
+    # configure your local settings (sample here: http://tinypaste.org/Y6rLer2B)
     $ vim kronos/settings/local.py
 
     # start the django server

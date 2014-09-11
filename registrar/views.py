@@ -2,18 +2,35 @@ import os
 
 from .codecha import Codecha
 from django.shortcuts import render
+from django.http import Http404
 
 from registrar.models import Applicant
 from .forms import ApplicantForm
 
 
 def index(request):
-    """Renders the home page for contagious."""
+    """Renders the home page for contagious"""
     return render(request, 'registrar/index.html')
 
 
+def home(request):
+    "Renders the home page"
+    return render(request,'registrar/home.html',{})
+
+def workshop(request, workshop_key):
+    """Renders the Pygame workshop"""
+    print('Got workshop_key: %s' % workshop_key)
+    if workshop_key == 'pygame':
+        template = 'registrar/workshops/pygame.html'
+    elif workshop_key == 'dropbox':
+        template = 'registrar/workshops/dropbox.html'
+    else:
+        raise Http404
+    return render(request, template, {})
+
+
 def register(request):
-    """ Returns the registration page."""
+    """Returns the registration page"""
     if request.method == 'GET':
         form = ApplicantForm()
         return render(request, 'registrar/register.html', {'form': form})
@@ -42,17 +59,6 @@ def about(request):
     "Renders the about page"
     return render(request, 'registrar/about.html', {})
 
-def home(request):
-    "Renders the home page"
-    return render(request,'registrar/home.html',{})
-
-def dropbox(request):
-    "Renders the dropbox workshop"
-    return render(request,'registrar/dropbox.html',{})
-
-def pygame(request):
-    "Renders the Pygame workshop"
-    return render(request,'registrar/pygame.html',{})
 
 # Codecha code
 def codecha_passed(request):
@@ -73,6 +79,7 @@ def codecha_passed(request):
         return True
     else:
         return False
+
 
 def __get_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')

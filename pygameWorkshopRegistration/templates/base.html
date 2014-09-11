@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock title %}Pygame Workshop</title>
+    <title>{% block title %}{% endblock title %}Kronos</title>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Voltaire' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -26,8 +26,7 @@
             <h1>C&lt;&gt;NTAGIOUS</h1>
             <nav>
                 <a href="{% url "registrar:home" %}" class="item">Home</a>
-                <a href="{% url "registrar:pygame" %}" class="item">about</a>
-                <a href="{% url "registrar:register" %}" class="item">workshop</a>
+                <a href="{% url "registrar:about" %}" class="item">about</a>
             </nav>
             <div class="clear"></div>
         {% endblock header %}

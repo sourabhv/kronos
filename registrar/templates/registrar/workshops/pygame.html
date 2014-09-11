@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}Title | {% endblock title %}
+{% block title %}Pygame Workshop | {% endblock title %}
 
 {% block extra_header %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/about.css">
 {% endblock extra_header %}
 
 {% block content %}
-    <h1>Get your environment set up</h1>
+    <h1>Pygame</h1>
     <div id="env-setup">
         <div id="env-options">
             <p>Go on, choose your OS ...</p>
@@ -38,13 +38,13 @@
 
                 <p>Now lets test off to see if everything works. Open up Python's shell and type:</p>
 
-                <!--<ul class="code">
+                <ul class="code">
                     <li>import pygame; print pygame.version.ver</li>
                 </ul>
 
                 <p>If you get something like <code>1.9.Xrelease</code> (where X is any number) then Voila! everything works.</p>
                 <p>Congratulations! You're all ready for the big day.</p>
-            </div> -->
+            </div>
             <div>
                 <h2 class="noscript">Linux</h2>
                 <!--
@@ -87,15 +87,23 @@
 
                 <p><center>. . .</center></p>
 
-                <p>First we will have to install pip.Then we will have to install dropbox module and the click cli interface </p>
+                <p>So you're done, eh? Good work! Now let's install pygame. In your terminal, type this:</p>
 
                 <ul class="code terminal">
-                    <li> sudo apt-get install python-setuptools </li>
-                    <li> sudo easy_install pip</li>
-                    <li> pip install dropbox </li>
-                    <li> pip install click </li>
+                    <li>sudo apt-get install python-pygame</li>
                 </ul>
 
+                <i>Note: If your os doesn't use apt, search for pygame in official repositories</i>
+
+                <p>When its complete, in the terminal, type this:</p>
+
+                <ul class="code terminal">
+                    <li>python2.7 -c "import pygame; print pygame.version.ver"</li>
+                </ul>
+
+                <p>If you get something like <code>1.9.Xrelease</code> (where X is any number), then congratulations, you're all set!</p>
+
+            </div>
             <div>
                 <h2 class="noscript">Mac</h2>
                 <p>Check to see if you have python installed on your system, Open up your terminal and type,</p>
@@ -129,7 +137,7 @@
                     <li>brew install python</li>
                 </ul>
 
-                <!--<p>Finally, you can <a href="http://pygame.org/ftp/pygame-1.9.Xrelease-python.org-(where X is any number) 32bit-py2.7-macosx10.3.dmg">download</a> pygame's disk image and install it. Phew!</p> -->
+                <p>Finally, you can <a href="http://pygame.org/ftp/pygame-1.9.Xrelease-python.org-(where X is any number) 32bit-py2.7-macosx10.3.dmg">download</a> pygame's disk image and install it. Phew!</p>
 
             </div>
         </div>

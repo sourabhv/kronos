@@ -1,4 +1,4 @@
-#Large {
+.large {
     margin: 0.20em 0 0 ;
     text-align: center;
     font-family: 'Voltaire';
@@ -7,7 +7,7 @@
     font-size: 8em;
 }
 
-#small {
+.small {
     text-align: center;
     font-family: 'Voltaire';
     font-weight: normal;
@@ -31,7 +31,7 @@
     transform: translate(0px,-100%);
 }
 
-.tile {
+.tile-container .tile {
     background:inherit;
     width:inherit;
     height:inherit;
@@ -41,6 +41,10 @@
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+.tile-container a {
+    display: block;
+}
+
 .workshop-image {
     margin-top:20px;
     margin-left:10px;

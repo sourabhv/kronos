@@ -99,10 +99,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'pygameWorkshopRegistration.urls'
+ROOT_URLCONF = 'kronos.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'pygameWorkshopRegistration.wsgi.application'
+WSGI_APPLICATION = 'kronos.wsgi.application'
 
 TEMPLATE_DIRS = (
     root('templates'),

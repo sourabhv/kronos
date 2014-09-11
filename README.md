@@ -8,11 +8,11 @@ Quick Start
 
 You should be able to get started with:
 
-    $ git clone git@github.com:sourabhv/pygameWorkshopRegistration.git
-    $ cd pygameWorkshopRegistration 
-    
+    $ git clone git@github.com:sourabhv/kronos.git
+    $ cd kronos
+
     # configure your database (sample here- https://dpaste.de/ej1d )
-    $ vim pygameWorkshopRegistration/settings/local.py
+    $ vim kronos/settings/local.py
 
     # start the django server
     $ python manage.py runserver
@@ -20,14 +20,14 @@ You should be able to get started with:
 Developing
 ----------
 
-If you wish to contribute to pygameWorkshopRegistration, please create a
+If you wish to contribute to kronos, please create a
 **fork** of this repository and work on your version and then send us a pull request.
 
 One more thing, do setup an upstream to the original repository so that you're
 always updated with the latest code.
 
     $ git add remote upstream
-    git@github.com:sourabhv/pygameWorkshopRegistration.git
+    git@github.com:sourabhv/kronos.git
 
 Next, please follow the following everytime before you start working
 

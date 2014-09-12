@@ -65,16 +65,18 @@ figure.tile img {
     margin: 10px auto 50px;
     background-color: #FFFFFF;
     font-family: 'Lato', sans-serif;
+    border-radius: 2px;
 }
 
-#dropbox button:hover {
-    background-color: #0076D8;
+#dropbox:hover {
+    background-color: #DBF1FA;
     color: #FFFFFF;
     -webkit-transition: background-color 1s, color 1s;
     transition: background-color 1s, color 1s;
 }
-#gaming button:hover {
-    background-color: #2ECC71;
+
+#gaming:hover {
+    background-color: #8BE5B0;
     color: #FFFFFF;
     -webkit-transition: background-color .5s, color .5s;
     transition: background-color .5s, color .5s;

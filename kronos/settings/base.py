@@ -80,7 +80,8 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '7ky-(l%x1kk%8!7$+(gzlo+-r%i6z8iaig5%8r%b+v^cxxh0y_'
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -98,10 +99,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'pygameWorkshopRegistration.urls'
+ROOT_URLCONF = 'kronos.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'pygameWorkshopRegistration.wsgi.application'
+WSGI_APPLICATION = 'kronos.wsgi.application'
 
 TEMPLATE_DIRS = (
     root('templates'),

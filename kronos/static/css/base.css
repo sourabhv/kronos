@@ -1,25 +1,21 @@
 /*
 ****************************************
--------  global styles here
+------- global styles here
 ****************************************
 */
-
 /*
 @font-face {
-  font-family: 'Aaux ProLight';
-  src: url('Aaux ProLight.ttf') format('truetype');
+font-family: 'Aaux ProLight';
+src: url('Aaux ProLight.ttf') format('truetype');
 }
 */
-
 * { margin:0; padding:0; }
-
 html, body {
     height: 100%;
     /*border-top: 2px solid #9DCB09;*/
     font-family: 'Lato', 'Aaux ProLight', sans-serif;
     background-color: #FFFFFF;
 }
-
 header {
     height: auto;
     padding: 25px 40px;
@@ -28,18 +24,16 @@ header {
     font-size: 1em;
     font-family: "Voltaire";
     text-align: center;
-    /*-moz-box-shadow:    0 1px 10px 1px #ccc;*/
+    /*-moz-box-shadow: 0 1px 10px 1px #ccc;*/
     /*-webkit-box-shadow: 0 1px 10px 1px #ccc;*/
-    /*box-shadow:         0 1px 10px 1px #ccc;*/
+    /*box-shadow: 0 1px 10px 1px #ccc;*/
     background: #F7F7F7;
 }
-
 header:after {
     content: '';
     display: block;
     clear: both;
 }
-
 header > h1 {
     color: #777777;
     font-family: "Voltaire";
@@ -48,7 +42,6 @@ header > h1 {
     float: left;
     margin: -5px auto auto 30px;
 }
-
 nav {
     padding-top: 10px;
     width: auto;
@@ -56,7 +49,6 @@ nav {
     margin-right: 10px;
     float: right;
 }
-
 nav > a.item {
     padding: 10px;
     margin: -10px 5px;
@@ -67,31 +59,25 @@ nav > a.item {
     border: 1px solid transparent;
     border-radius: 5px;
 }
-
 nav > .item:hover {
     /*color: #BADA55;*/
     border: 1px solid #777777;
- }
-
+}
 .clear { clear: both; }
 .heart { font-weight: bold; }
-
 #content {
     margin: 0 auto;
     min-height: 100%;
     margin-bottom: -279px;
 }
-
 #content:after {
     content: "";
     display: block;
 }
-
-/****** for the sticky footer    */
+/****** for the sticky footer */
 footer, #content:after {
     height: 279px;
 }
-
 footer p {
     padding: 1em;
     height: auto;
@@ -103,28 +89,23 @@ footer p {
     font-weight: 300;
     font-size: 18px;
 }
-
 .logo {
     border-bottom: 1px solid #383838;
     padding: 2em 1em;
 }
-
 /*
 ****************************************
--------  404 page style
+------- 404 page style
 ****************************************
 */
-
 .page-error {
     text-align: center;
 }
-
 /*
 ****************************************
--------  Media queries
+------- Media queries
 ****************************************
 */
-
 @media (max-width: 620px) {
     header {
         text-align: center;

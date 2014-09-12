@@ -16,19 +16,20 @@ html, body {
 }
 
 body {
-	background-color: #DDD;
+	background-color: #eee;
     background-image: url('../images/header-background.png');
-/*	background-image: -webkit-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);
-	background-image:    -moz-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);
-	background-image:     -ms-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);
-	background-image:      -o-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);
-	background-image:         radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);*/
+	/*background-image: -webkit-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);*/
+	/*background-image:    -moz-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);*/
+	/*background-image:     -ms-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);*/
+	/*background-image:      -o-radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);*/
+	/*background-image:         radial-gradient(center center, circle farthest-side, #EEE 0%, #CCC 100%);*/
 }
 
 * a {
    text-decoration: none;
    color: #333;
 }
+
 #container {
 	position: relative;
 	min-height: 100%;
@@ -55,6 +56,10 @@ body {
 	    -ms-transform: scale(4);
 	     -o-transform: scale(4);
 	        transform: scale(4);
+}
+
+#name a:focus {
+	outline: 0;
 }
 
 #lt span, #gt span {

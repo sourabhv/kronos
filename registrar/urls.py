@@ -4,6 +4,8 @@ from .views import *
 
 urlpatterns = patterns('',
     url(r'^$', index, name='index'),
-    url(r'^pyworkshop/$', register, name='register'),
-    url(r'^pyworkshop/about/$', about, name='about'),
+    url(r'^home/$', home, name='home'),
+    url(r'^worshop:(?P<workshop_key>[a-zA-Z0-9]+)/$', workshop, name='workshop'),
+    url(r'^register/$', register, name='register'),
+    url(r'^about/$', about, name='about'),
 )

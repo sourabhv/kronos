@@ -1,1 +1,1 @@
-web: gunicorn pygameWorkshopRegistration.wsgi
+web: gunicorn kronos.wsgi

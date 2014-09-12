@@ -3,27 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Contagious | Coming Soon</title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 	<div id="container">
 		<div id="content">
 			<div id="lt"><span>&lt;</span></div>
-            <div id="name"><span><a href="pyworkshop/">Contagious</a></span></div>
+            <div id="name"><span><a href="{% url "registrar:home" %}">Contagious</a></span></div>
 			<div id="gt"><span>&gt;</span></div>
 		</div>
         <footer>
         <!-- TODO: figure out how to render for subdomains from django
             <a href="http://python.contagious.co.in/">...</a>
         -->
-        <a href="pyworkshop/">...</a>
+        <a href="{% url "registrar:home" %}">...</a>
         </footer>
 	</div>
-    <script src="{{ STATIC_URL }}js/script.js"></script>
+    <script src="{{ STATIC_URL }}js/index.js"></script>
     <script>
+        document.getElementById('name').getElementsByTagName('a')[0].focus();
+
         function redirect_to_next_page() {
-            window.location.href = "pyworkshop/";
+            window.location.href = "{% url "registrar:home" %}";
         }
         setTimeout(redirect_to_next_page, 20000);
     </script>

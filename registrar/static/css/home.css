@@ -1,4 +1,4 @@
-p.caption {
+.caption {
     margin: 0.3em 0 0 ;
     text-align: center;
     font-family: 'Voltaire';
@@ -7,7 +7,7 @@ p.caption {
     text-transform: uppercase;
 }
 
-p.tagline {
+.tagline {
     text-align: center;
     font-family: 'Voltaire';
     color: #414141;
@@ -45,12 +45,12 @@ figure.tile {
 figure.tile img {
     height: 150px;
 }
-.tile-alt {
+.tile-alt , h1{
     text-align: center;
     font-size: 28px;
     color: #414141;
 }
-.tile-footer p {
+.tile-footer p, p {
     width: 80%;
     margin: 20px auto;
     color: #787878;

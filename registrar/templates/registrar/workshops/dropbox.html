@@ -7,10 +7,46 @@
 {% endblock extra_header %}
 
 {% block content %}
-    <h1>Dropbox</h1>
+    <section>
+        <h1 class="title">DROPBOX</h1>
+    <h2 class="subtitle">Build a Dropbox command line tool in python</h2>
+            <a href="{% url "registrar:register" %}" class="register-button">Register</a>
+    </section>
+
+    <div class="clear"> </div>
+    <h3>Description</h3>
+    <p>A 2.5 hour workshop where attendees will learn to use Dropbox API and in turn make a command line client for Dropbox.</p>
+
+    <h3>Content</h3>
+
+    <ul>
+        <li>Zero Hour :: Get work machines ready for the workshop <span>|</span> Includes installing Python, text editor <span>|</span> Details are provided on our website - http://contagious.co.in.</li>
+        <li>Hour One :: Show case of the CLI client <span>|</span> Introduction to Python</li>
+        <li>Hour Two :: First look at the Dropbox API <span>|</span> Use the API to make our own command line tool <span>|</span> Learn to expand the idea • Touchdown</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <ul>
+        <li>Curiosity</li>
+        <li>A Laptop with python installed in it</li>
+        <li>Some basic Programming skills would be helpful but not necessary</li>
+    </ul>
+
+    <h3>Venue and Timings</h3>
+    <ul>
+        <li>I - Block Seminar Hall</li>
+        <li>15 Sept, 2014</li>
+        <li>11:30 - 2:30 pm</li>
+    </ul>
+
+    <p class="terminator">  </p>
+
+    <h2 class="subtitle">Get your computer Setup</h2>
+    <div class="clear"> </div>
+
     <div id="env-setup">
         <div id="env-options">
-            <p>Go on, choose your OS ...</p>
+            <p>Go on, choose your OS</p>
             <div class="active">
                 <img src="{{ STATIC_URL }}images/windows.png">
                 <span>Windows</span>
@@ -167,3 +203,4 @@
     </div>
     <script src="{{ STATIC_URL }}js/about.js"></script>
 {% endblock content %}
+

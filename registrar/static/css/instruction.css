@@ -42,6 +42,37 @@
     color: #1ECD97;
 }
 
+#content h1.title {
+}
+#content h2.subtitle {
+    font-family: 'Voltaire', sans-serif;
+    font-weight: normal;
+    display:block;
+    width: 90%;
+    background-color: #F9F9F9;
+    padding: 10px 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+#content a.register-button {
+    float: right;
+    border: none;
+    padding: 5px;
+    width: 80px;
+    background-color: #1ECD97;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-radius: 2px;
+    text-align: center;
+    clear: both;
+}
+
+#content div.clear {
+    clear: both;
+    margin-bottom: 20px;
+}
+
 #content code {
     margin: 0 3px;
     padding: 3px 5px;
@@ -159,4 +190,3 @@
 
 #env-instructions div {
 }
-

@@ -36,6 +36,12 @@
             <p>Or you can always be a part simply by filling this form.</p>
 
             <p>
+                <label for="id_workshop">Workshop <span>*</span></label>
+                {{ form.workshop }}
+                {% if form.errors %} {{ form.workshop.errors }} {% endif %}
+            </p>
+
+            <p>
                 <label for="id_name">Name <span>*</span></label>
                 {{ form.name }}
                 {% if form.errors %} {{ form.name.errors }} {% endif %}
@@ -49,10 +55,10 @@
             </p>
 
             <p>
-                <label for="id_exprienced_in_python">Python Experience <span>*</span></label>
-                {{ form.python_exprience }}
+                <label for="id_python_experience">Python Experience <span>*</span></label>
+                {{ form.python_experience }}
                 <span class="down-arrow">&#9660;</span>
-                {% if form.errors %} {{ form.python_exprience.errors }} {% endif %}
+                {% if form.errors %} {{ form.python_experience.errors }} {% endif %}
             </p>
 
             <p>

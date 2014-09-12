@@ -1,11 +1,12 @@
 import os
 
 from .codecha import Codecha
-from django.shortcuts import render
 from django.http import Http404
+from django.shortcuts import render
 
-from registrar.models import Applicant
 from .forms import ApplicantForm
+from .models import Applicant
+from .workshops import WORKSHOPS_TEMPLATES
 
 
 def index(request):
@@ -17,13 +18,12 @@ def home(request):
     "Renders the home page"
     return render(request,'registrar/home.html',{})
 
+
 def workshop(request, workshop_key):
     """Renders the Pygame workshop"""
-    print('Got workshop_key: %s' % workshop_key)
-    if workshop_key == 'pygame':
-        template = 'registrar/workshops/pygame.html'
-    elif workshop_key == 'dropbox':
-        template = 'registrar/workshops/dropbox.html'
+
+    if workshop_key in WORKSHOPS_TEMPLATES:
+        template = WORKSHOPS_TEMPLATES[workshop_key]
     else:
         raise Http404
     return render(request, template, {})
@@ -31,6 +31,7 @@ def workshop(request, workshop_key):
 
 def register(request):
     """Returns the registration page"""
+
     if request.method == 'GET':
         form = ApplicantForm()
         return render(request, 'registrar/register.html', {'form': form})

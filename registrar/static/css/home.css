@@ -3,7 +3,7 @@
     text-align: center;
     font-family: 'Voltaire';
     color: #787878;
-    font-size: 8em;
+    font-size: 7em;
     text-transform: uppercase;
 }
 
@@ -45,12 +45,12 @@ figure.tile {
 figure.tile img {
     height: 150px;
 }
-.tile-alt , h1{
+.tile-alt {
     text-align: center;
     font-size: 28px;
     color: #414141;
 }
-.tile-footer p, p {
+.tile-footer p {
     width: 80%;
     margin: 20px auto;
     color: #787878;
@@ -66,6 +66,7 @@ figure.tile img {
     background-color: #FFFFFF;
     font-family: 'Lato', sans-serif;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 #dropbox:hover {
@@ -81,3 +82,23 @@ figure.tile img {
     -webkit-transition: background-color .5s, color .5s;
     transition: background-color .5s, color .5s;
 }
+
+
+/*about.html styles*/
+#about {
+    width: 720px;
+    margin: 50px auto;
+    padding: 80px;
+    box-shadow: 0 0 .5em #EEE;
+    color: #919191;
+}
+
+#about section  { margin: 20px 0 50px;}
+#about .heading { margin: 50px 0 80px;}
+#about .caption { font-size: 4em; color: #ADADAD; font-weight: normal;}
+#about .tagline { font-size: 1.2em; color: #E0E0E0;}
+#about h1 { color: #484848;}
+#about p { margin: 10px;}
+#about li { list-style-type: none; margin: 5px 40px;}
+#about ul.make {text-align: center; margin-top: 70px;}
+#about li.maker { text-align: center; display: inline; list-style-type: none; margin: 0 50px;}

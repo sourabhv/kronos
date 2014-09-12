@@ -26,8 +26,7 @@ If you wish to contribute to kronos, please create a
 One more thing, do setup an upstream to the original repository so that you're
 always updated with the latest code.
 
-    $ git add remote upstream
-    git@github.com:sourabhv/kronos.git
+    $ git remote add upstream git@github.com:sourabhv/kronos.git
 
 Next, please follow the following everytime before you start working
 
@@ -36,3 +35,4 @@ Next, please follow the following everytime before you start working
     $ git merge upstream/master
 
 Happy hacking!
+

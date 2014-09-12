@@ -74,6 +74,13 @@ nav > .item:hover {
     content: "";
     display: block;
 }
+div p {
+    word-spacing : 0.2em;
+}
+p.terminator {
+    padding-top: 20px;
+    text-align: center;
+}
 /****** for the sticky footer */
 footer, #content:after {
     height: 279px;

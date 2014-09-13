@@ -16,6 +16,9 @@ html, body {
     font-family: 'Lato', 'Aaux ProLight', sans-serif;
     background-color: #FFFFFF;
 }
+.center {
+    text-align: center
+}
 header {
     height: auto;
     padding: 25px 40px;

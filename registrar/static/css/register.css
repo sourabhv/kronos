@@ -132,7 +132,7 @@
 
 .form-holder select {
     -webkit-appearance: none;
-    -moz-appearance: none;
+    -moz-appearance: window;
     appearance: none;
     outline: none;
     background: #F3F3F3;
@@ -142,7 +142,7 @@
     font-size: 1em;
     cursor: pointer;
     /*remove the dropdown arrow for mozilla*/
-    -moz-appearance: none;
+    /*-moz-appearance: none;*/
     text-indent: 0.01px;
     text-overflow: '';
 
@@ -171,4 +171,16 @@
     color: #FB797E;
     font-style: italic;
     font-size: 12px;
+}
+
+/*
+****************************************
+-------  fix moz double arrow
+****************************************
+*/
+
+@moz-document url-prefix() {
+    .form-holder input[type=text] {
+        background-color: #DDD;
+    }
 }

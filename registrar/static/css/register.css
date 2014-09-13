@@ -102,6 +102,7 @@
     border: none;
     border: 3px solid transparent;
     background-color: #F3F3F3;
+    background-color: #DDD; /* for compensating mozilla arrow fix */
     font-size: 1em;
     letter-spacing: 1px;
 }
@@ -171,16 +172,4 @@
     color: #FB797E;
     font-style: italic;
     font-size: 12px;
-}
-
-/*
-****************************************
--------  fix moz double arrow
-****************************************
-*/
-
-@moz-document url-prefix() {
-    .form-holder input[type=text] {
-        background-color: #DDD;
-    }
 }

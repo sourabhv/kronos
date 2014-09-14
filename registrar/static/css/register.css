@@ -52,6 +52,17 @@
 ****************************************
 */
 
+.confirm-message a {
+    color: #1ECD97;
+    border-bottom: 1px dotted #1ECD97;
+}
+
+.confirm-message a:visited,
+.confirm-message a:active,
+.confirm-message a:focus {
+    color: #1ECD97;
+}
+
 .form-holder {
     background-color: white;
     padding: 20px 50px;

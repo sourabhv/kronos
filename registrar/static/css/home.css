@@ -17,10 +17,11 @@
 
 .grid {
     margin: auto;
-    padding: 100px;
+    padding: 50px;
     font-family: Voltaire, arial, sans-serif;
     text-align: center;
 }
+
 .grid li {
     margin: 30px;
     display: inline-block;
@@ -104,16 +105,25 @@ figure.tile img {
 
 @media (max-width: 620px) {
     ul.grid {
-        padding: 20px;
+        padding: 50px 20px;
+    }
+    .caption {
+        font-size: 6em;
     }
 }
 
 @media (max-width: 460px) {
     ul.grid {
-        padding: 0;
+        padding: 50px 0;
     }
     ul.grid li {
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid li {
+        width: 90%;
     }
 }

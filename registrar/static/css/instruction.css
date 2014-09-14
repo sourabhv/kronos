@@ -211,3 +211,28 @@
 
 #env-instructions div {
 }
+
+@media (max-width: 850px) {
+    #content {
+        width: 85%;
+    }
+}
+
+@media (max-width: 600px) {
+    #env-options div {
+        display: block;
+        margin: 10px auto;
+        width: 70%;
+    }
+}
+
+@media (max-width: 460px) {
+    #content a.register-button {
+        display: block;
+        float: none;
+        margin: 20px auto;
+        padding: 10px;
+        width: 90%;
+        text-align: center;
+    }
+}

@@ -86,7 +86,7 @@ figure.tile img {
 
 /*about.html styles*/
 #about {
-    width: 720px;
+    max-width: 720px;
     margin: 50px auto;
     padding: 80px;
     box-shadow: 0 0 .5em #EEE;
@@ -94,6 +94,7 @@ figure.tile img {
 }
 
 #about section  { margin: 20px 0 50px;}
+#about .caption .thin { display: none; visibility: hidden; }
 #about .heading { margin: 50px 0 80px;}
 #about .caption { font-size: 4em; color: #ADADAD; font-weight: normal;}
 #about .tagline { font-size: 1.2em; color: #E0E0E0;}
@@ -110,6 +111,20 @@ figure.tile img {
     .caption {
         font-size: 6em;
     }
+    #about {
+        padding: 5%;
+        padding-right: 0;
+    }
+
+    #about .make li {
+        display: none;
+    }
+
+    #about .make .maker {
+        margin: 0;
+        padding: 10px 0;
+        display: block;
+    }
 }
 
 @media (max-width: 460px) {
@@ -125,5 +140,9 @@ figure.tile img {
 @media (max-width: 380px) {
     .grid li {
         width: 90%;
+    }
+
+    #about .caption {
+        font-size: 3em;
     }
 }

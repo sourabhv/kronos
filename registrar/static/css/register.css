@@ -66,7 +66,6 @@
 .form-holder {
     background-color: white;
     padding: 20px 50px;
-    border-radius: 3px;
     font-weight: 300;
 }
 
@@ -89,18 +88,20 @@
 }
 
 .form-holder input, select {
+    padding: .6em 1em;
+    /*padding: 1em 1.3em;*/
+    width: 100%;
+    color: #414141;
+    background-color: #F3F3F3;
+    background-color: #DDD; /* for compensating mozilla arrow fix, find fix soon */
+    font-family: 'Lato', 'Aaux ProLight', sans-serif;
+    font-size: 14px;
+
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-
-    padding: .6em 1em;
-    /*padding: 1em 1.3em;*/
-    width: 100%;
-    color: #414141;
-    font-family: 'Lato', 'Aaux ProLight', sans-serif;
-    font-size: 14px;
 
     -webkit-transition: border .15s linear, background .15s linear, color .15s linear;
     -moz-transition:    border .15s linear, background .15s linear, color .15s linear;
@@ -112,8 +113,6 @@
 .form-holder input[type=text] {
     border: none;
     border: 3px solid transparent;
-    background-color: #F3F3F3;
-    background-color: #DDD; /* for compensating mozilla arrow fix */
     font-size: 1em;
     letter-spacing: 1px;
 }
@@ -144,17 +143,14 @@
 
 .form-holder select {
     -webkit-appearance: none;
-    -moz-appearance: window;
+    -moz-appearance: window;  /* mozilla arrow fix */
     appearance: none;
     outline: none;
-    background: #F3F3F3;
     width: 100%;
     border: none;
     border: 3px solid transparent;
     font-size: 1em;
     cursor: pointer;
-    /*remove the dropdown arrow for mozilla*/
-    /*-moz-appearance: none;*/
     text-indent: 0.01px;
     text-overflow: '';
 
@@ -183,4 +179,31 @@
     color: #FB797E;
     font-style: italic;
     font-size: 12px;
+}
+
+
+@media (max-width: 600px) {
+    .form-holder {
+        padding: 20px;
+    }
+
+    .codecha {
+        padding: 20px;
+    }
+
+    #codecha_widget, #codecha_widget * {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+
+    }
+
+    #codecha_widget,
+    #codecha_error_overlay,
+    #codecha_wording,
+    #codecha_code_area_top,
+    #codecha_code_area,
+    #codecha_code_area_bottom {
+        width: 100%;
+    }
 }

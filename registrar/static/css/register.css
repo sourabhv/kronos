@@ -54,6 +54,7 @@
 
 .confirm-message a {
     color: #1ECD97;
+    text-decoration: none;
     border-bottom: 1px dotted #1ECD97;
 }
 
@@ -183,6 +184,14 @@
 
 
 @media (max-width: 600px) {
+    .confirm-message {
+        width: auto;
+        padding: 20px;
+    }
+    .confirm-message * {
+        text-align: center;
+    }
+
     .form-holder {
         padding: 20px;
     }
@@ -195,7 +204,6 @@
         -webkit-box-sizing: border-box;
            -moz-box-sizing: border-box;
                 box-sizing: border-box;
-
     }
 
     #codecha_widget,

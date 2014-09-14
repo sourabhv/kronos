@@ -16,14 +16,13 @@
 }
 
 .grid {
-    width: 900px;
     margin: auto;
     padding: 100px;
     font-family: Voltaire, arial, sans-serif;
+    text-align: center;
 }
 .grid li {
-    margin: 0;
-    margin-left: 70px;
+    margin: 30px;
     display: inline-block;
     width: 350px;
     min-height: 400px;
@@ -102,3 +101,19 @@ figure.tile img {
 #about li { list-style-type: none; margin: 5px 40px;}
 #about ul.make {text-align: center; margin-top: 70px;}
 #about li.maker { text-align: center; display: inline; list-style-type: none; margin: 0 50px;}
+
+@media (max-width: 620px) {
+    ul.grid {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    ul.grid {
+        padding: 0;
+    }
+    ul.grid li {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

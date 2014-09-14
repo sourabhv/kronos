@@ -1,8 +1,7 @@
 #content {
-    padding: 50px 0 100px;
+    padding: 50px 0;
     width: 60%;
     max-width: 720px;
-    min-width: 520px;
 }
 
 #content * {
@@ -16,7 +15,7 @@
 }
 
 #content a {
-    color: #222;
+    color: #919191;
     text-decoration: none;
     border-bottom: 1px dotted #222;
     padding: 3px 5px;
@@ -40,6 +39,25 @@
     font-family: 'Lato', 'Auxx ProLight', 'sans-serif';
     font-weight: normal;
     color: #1ECD97;
+}
+
+#content h3 {
+    margin: 50px 0 20px;
+    font-size: 22px;
+}
+
+#content p {
+    color: #919191;
+}
+
+#content ul li {
+    font-size: 17px;
+    color: #919191;
+}
+
+#content ul li span {
+    color: #919191;
+    font-style: italic;
 }
 
 #content h1.title {

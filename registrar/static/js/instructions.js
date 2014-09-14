@@ -6,7 +6,6 @@
         }
     });
 
-
     $('.noscript').hide();
     var $env_instructions = $('#env-instructions');
     var $env_options = $('#env-options');

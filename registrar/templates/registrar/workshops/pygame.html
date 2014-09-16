@@ -7,7 +7,17 @@
 {% endblock extra_header %}
 
 {% block content %}
-    <h1>Pygame</h1>
+    <section>
+        <h1 class="title">PyGame</h1>
+        <h2 class="subtitle">Build a 2D Game uing Python-PyGame</h2>
+        <a href="{% url "registrar:register" %}" class="register-button">Register</a>
+    </section>
+
+    <div class="clear"></div>
+
+    <p style="color:#888" class="center">Details will be updated soon. Sorry for the delay :(</p>
+    <p style="color:#888" class="center">But why don't you go ahead and setup your computer?</p>
+
     <div id="env-setup">
         <div id="env-options">
             <p>Go on, choose your OS ...</p>
@@ -142,5 +152,5 @@
             </div>
         </div>
     </div>
-    <script src="{{ STATIC_URL }}js/about.js"></script>
+    <script src="{{ STATIC_URL }}js/instructions.js"></script>
 {% endblock content %}

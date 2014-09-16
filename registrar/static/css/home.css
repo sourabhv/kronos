@@ -16,14 +16,18 @@
 }
 
 .grid {
-    width: 900px;
     margin: auto;
+<<<<<<< HEAD
     padding: 100px 0;
+=======
+    padding: 50px;
+>>>>>>> upstream/master
     font-family: Voltaire, arial, sans-serif;
+    text-align: center;
 }
+
 .grid li {
-    margin: 0;
-    margin-left: 70px;
+    margin: 30px;
     display: inline-block;
     width: 350px;
     min-height: 400px;
@@ -86,7 +90,7 @@ figure.tile img {
 
 /*about.html styles*/
 #about {
-    width: 720px;
+    max-width: 720px;
     margin: 50px auto;
     padding: 80px;
     box-shadow: 0 0 .5em #EEE;
@@ -94,6 +98,7 @@ figure.tile img {
 }
 
 #about section  { margin: 20px 0 50px;}
+#about .caption .thin { display: none; visibility: hidden; }
 #about .heading { margin: 50px 0 80px;}
 #about .caption { font-size: 4em; color: #ADADAD; font-weight: normal;}
 #about .tagline { font-size: 1.2em; color: #E0E0E0;}
@@ -102,3 +107,46 @@ figure.tile img {
 #about li { list-style-type: none; margin: 5px 40px;}
 #about ul.make {text-align: center; margin-top: 70px;}
 #about li.maker { text-align: center; display: inline; list-style-type: none; margin: 0 50px;}
+
+@media (max-width: 620px) {
+    ul.grid {
+        padding: 50px 20px;
+    }
+    .caption {
+        font-size: 6em;
+    }
+    #about {
+        padding: 5%;
+        padding-right: 0;
+    }
+
+    #about .make li {
+        display: none;
+    }
+
+    #about .make .maker {
+        margin: 0;
+        padding: 10px 0;
+        display: block;
+    }
+}
+
+@media (max-width: 460px) {
+    ul.grid {
+        padding: 50px 0;
+    }
+    ul.grid li {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid li {
+        width: 90%;
+    }
+
+    #about .caption {
+        font-size: 3em;
+    }
+}

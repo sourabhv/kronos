@@ -2,7 +2,7 @@
 {% block title %}Title | {% endblock title %}
 
 {% block extra_header %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/home.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/home.css">
 {% endblock extra_header %}
 
 {% block content %}
@@ -10,37 +10,37 @@
     <p class="tagline">The Code Epidemic</p>
 
     <main id="workshops">
-    <ul class="grid">
-        <li id="dropbox">
-            <a href="{% url "registrar:workshop" "dropbox" %}">
-            <figure class="tile">
-                <img src="{{STATIC_URL}}/images/dropbox.png">
-            </figure>
-                <p class="tile-alt">Dropbox Workshop</p>
-            </a>
-
-            <section class="tile-footer">
-                <p>Build a Dropbox command line tool in python.</p>
+        <ul class="grid">
+            <li id="dropbox">
                 <a href="{% url "registrar:workshop" "dropbox" %}">
-                    <button>Join in</button>
+                    <figure class="tile">
+                        <img src="{{STATIC_URL}}/images/dropbox.png">
+                    </figure>
+                    <p class="tile-alt">Dropbox Workshop</p>
                 </a>
-            </section>
-        </li>
-        <li id="gaming">
-            <a href="{% url "registrar:workshop" "pygame" %}">
-            <figure class="tile">
-                <img src="{{STATIC_URL}}/images/controller.png">
-             </figure>
-                <p class="tile-alt">Gaming Workshop</p>
-            </a>
 
-            <section class="tile-footer">
-                <p>Build a game in python using Pygame.</p>
+                <section class="tile-footer">
+                    <p>Build a Dropbox command line tool in python.</p>
+                    <a href="{% url "registrar:workshop" "dropbox" %}">
+                        <button>Join in</button>
+                    </a>
+                </section>
+            </li>
+            <li id="gaming">
                 <a href="{% url "registrar:workshop" "pygame" %}">
-                    <button>Join in</button>
+                    <figure class="tile">
+                        <img src="{{STATIC_URL}}/images/controller.png">
+                    </figure>
+                    <p class="tile-alt">Gaming Workshop</p>
                 </a>
-            </section>
-    </li>
-    </ul>
+
+                <section class="tile-footer">
+                    <p>Build a game in python using Pygame.</p>
+                    <a href="{% url "registrar:workshop" "pygame" %}">
+                        <button>Join in</button>
+                    </a>
+                </section>
+            </li>
+        </ul>
     </main>
 {% endblock content %}

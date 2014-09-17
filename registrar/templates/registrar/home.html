@@ -11,6 +11,21 @@
 
     <main id="workshops">
         <ul class="grid">
+            <li id="blog">
+                <a href="{% url "registrar:workshop" "blog" %}">
+                    <figure class="tile">
+                        <img src="{{STATIC_URL}}/images/blog.png">
+                    </figure>
+                    <p class="tile-alt">Blogging Workshop</p>
+                </a>
+
+                <section class="tile-footer">
+                    <p>Build a Blog using HTML5, CSS3 & some Github magic.</p>
+                    <a href="{% url "registrar:workshop" "blog" %}">
+                        <button>Join in</button>
+                    </a>
+                </section>
+            </li>
             <li id="dropbox">
                 <a href="{% url "registrar:workshop" "dropbox" %}">
                     <figure class="tile">
@@ -22,7 +37,7 @@
                 <section class="tile-footer">
                     <p>Build a Dropbox command line tool in python.</p>
                     <a href="{% url "registrar:workshop" "dropbox" %}">
-                        <button>Join in</button>
+                        <button>Over</button>
                     </a>
                 </section>
             </li>
@@ -37,7 +52,7 @@
                 <section class="tile-footer">
                     <p>Build a game in python using Pygame.</p>
                     <a href="{% url "registrar:workshop" "pygame" %}">
-                        <button>Join in</button>
+                        <button>Postponed</button>
                     </a>
                 </section>
             </li>

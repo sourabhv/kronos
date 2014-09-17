@@ -20,4 +20,12 @@
             $env_instructions.children('div').eq(id).show().siblings().hide();
         }
     })
+    
+    var $msg = $('.msg');
+    var $msgtoggle = $('#msg-toggle');
+    $msg.hide();
+    $msgtoggle.on('click', function (e) {
+        $msg.animate({ opacity: "toggle"}, 1000);
+    })
+    
 }) (jQuery);

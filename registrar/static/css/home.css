@@ -83,6 +83,13 @@ figure.tile img {
     transition: background-color .5s, color .5s;
 }
 
+#blog:hover {
+    background-color: #FAB2B8;
+    color: #FFFFFF;
+    -webkit-transition: background-color .5s, color .5s;
+    transition: background-color .5s, color .5s;
+}
+
 
 /*about.html styles*/
 #about {

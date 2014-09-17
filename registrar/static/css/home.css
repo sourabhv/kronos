@@ -17,11 +17,7 @@
 
 .grid {
     margin: auto;
-<<<<<<< HEAD
-    padding: 100px 0;
-=======
     padding: 50px;
->>>>>>> upstream/master
     font-family: Voltaire, arial, sans-serif;
     text-align: center;
 }
@@ -82,6 +78,13 @@ figure.tile img {
 
 #gaming:hover {
     background-color: #8BE5B0;
+    color: #FFFFFF;
+    -webkit-transition: background-color .5s, color .5s;
+    transition: background-color .5s, color .5s;
+}
+
+#blog:hover {
+    background-color: #FAB2B8;
     color: #FFFFFF;
     -webkit-transition: background-color .5s, color .5s;
     transition: background-color .5s, color .5s;

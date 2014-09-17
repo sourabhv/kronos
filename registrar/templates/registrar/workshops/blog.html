@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Pygame Workshop | {% endblock title %}
+{% block title %}Jekyll Powered Blog | {% endblock title %}
 
 {% block extra_header %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/instruction.css">
@@ -8,22 +8,52 @@
 
 {% block content %}
     <section>
-        <h1 class="title">PyGame</h1>
-        <h2 class="subtitle">Build a 2D Game uing Python-PyGame</h2>
-        <!--<a href="{% url "registrar:register" %}" class="register-button">Register</a>-->
-
-        <a id="msg-toggle" href="#" class="register-button">Postponed</a>
-        <p class="msg">Hey! Looks like we have to postpone this event for now. Please, see the list of upcoming events.</p>
+        <h1 class="title">Blogging</h1>
+        <h2 class="subtitle">Build your own Blog using the HTML5, CSS3 & some
+            Github Magic</h2>
+        <a href="{% url "registrar:register" %}" class="register-button">Register</a>
     </section>
 
     <div class="clear"></div>
+    <h3>Description</h3>
+    <p>A One day workshop where you will learn modern web technologies like
+    HTML5, CSS3 and few more cool concepts like Git and Github and club all
+    these to build your own Jekyll powered blog.</p>
 
-    <p style="color:#888" class="center">Details will be updated soon. Sorry for the delay :(</p>
-    <p style="color:#888" class="center">But why don't you go ahead and setup your computer?</p>
+    <h3>Content</h3>
+
+    <ul>
+        <li><span>Zero Hour ::</span> Get work machines ready for the workshop
+        • Includes installing Ruby, text editor, git and Making an account on
+        Github • Details are provided below</li>
+        <li><span>Hour One ::</span> HTML5 Rocks!</li>
+        <li><span>Hour Two ::</span> CSS3 Rules!</li>
+        <li><span>Hour Three ::</span> Learning Version Control : Git • Making a Github account • Igniting the Open Source fire</li>
+        <li><span>Hour Four ::</span> Building the blog • Deploying it online</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <ul>
+        <li>Curiosity</li>
+        <li>A Laptop with ruby, git, jekyll installed in it.  (See installation
+        instructions below)</li>
+    </ul>
+
+    <h3>Venue and Timings</h3>
+    <ul>
+        <li>I - Block Seminar Hall</li>
+        <li>19 Sept, 2014</li>
+        <li>9:00 AM - 1:30 PM</li>
+    </ul>
+
+    <p class="terminator">  </p>
+
+    <h2 class="subtitle">Setup your Computer </h2>
+    <div class="clear"> </div>
 
     <div id="env-setup">
         <div id="env-options">
-            <p>Go on, choose your OS ...</p>
+            <p>Go on, choose your OS</p>
             <div class="active">
                 <img src="{{ STATIC_URL }}images/windows.png">
                 <span>Windows</span>
@@ -40,23 +70,35 @@
         <div id="env-instructions">
             <div>
                 <h2 class="noscript">Windows</h2>
-                <p>We assume you are familiar with the general procedure of installing software on Windows. First off, download the binary(exe/msi) according to your architecture (32-bit or 64-bit). Don't know your architecture type? Head on to <a href="http://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit" target="_blank">Microsoft's website</a> to find out, and then come back here.</p>
+                <p>We assume you are familiar with the general procedure of installing software on Windows. First off, download the binary(exe/msi) according to your architecture (32-bit or 64-bit) and install them. Don't know your architecture type? Head on to <a href="http://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit" target="_blank">Microsoft's website</a> to find out, and then come back here.</p>
 
                 <ul class="dwnld-links">
                     <li><a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi">Python for 32-bit</a></li>
-                    <li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/tid72nv9/pygame-1.9.2a0.win32-py2.7.exe">Python-Pygame for 32-bit</a></li>
                     <li><a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6.amd64.msi">Python for 64-bit</a></li>
-                    <li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/tid72nv9/pygame-1.9.2a0.win-amd64-py2.7.exe">Python-Pygame for 64-bit</a></li>
                 </ul>
 
-                <p>Now lets test off to see if everything works. Open up Python's shell and type:</p>
+                <p>Great! So you have python now. Now lets install some other things</p>
 
-                <ul class="code">
-                    <li>import pygame; print pygame.version.ver</li>
+                <p>Install <code>pip</code> according to this wonderful <a href="http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows">StackOverflow Answer</a>. Then install Dropbox SDK and Click Command Line Interface Library by typing this in your terminal/command prompt</p>
+
+                <ul class="code terminal">
+                    <li>gem install jekyll</li>
                 </ul>
 
-                <p>If you get something like <code>1.9.Xrelease</code> (where X is any number) then Voila! everything works.</p>
-                <p>Congratulations! You're all ready for the big day.</p>
+                <p>Hope that went well, and now you can move on to create your
+                jekyll site. Go ahead type in the following commands to get it
+                running.</p>
+
+                <ul class="code terminal">
+                    <li>jekyll new my-awesome-site</li>
+                </ul>
+
+                <p>To see things live:</p>
+                <ul class="code terminal">
+                    <li>cd my-awesome site</li>
+                    <li>jekyll serve</li>
+                </ul>
+                <p class="terminator">________</p>
             </div>
             <div>
                 <h2 class="noscript">Linux</h2>
@@ -96,26 +138,29 @@
                     $ python -c "import sys; print sys.version"
                 -->
 
-                <p>If you are using Linux (woohoo!) then you already know what to do and how to do it, so we'll leave all the work for you <span class="smiley">:) </span> But still if you get stuck somewhere, you can either ask the <a href="https://www.google.com/#q=how+to+do+stuff+that+i+shouldn't+be+asking+help+for" target="_blank">almighty Google</a> for help or (even better) <code>use the source!</code> (another riddle? Great!)</p>
+                <p>If you are using Linux (woohoo!) then you already know what to do and how to do it, so we'll leave all the work for you <span class="smiley">:) </span> But still if you get stuck somewhere, you can either try a <a href="http://lmgtfy.com/?q=how+to+install+python+on+linux" target="_blank">Google Search</a> or <code>use the source!</code> (Yes Einstein! Its a riddle)</p>
 
                 <p><center>. . .</center></p>
 
-                <p>So you're done, eh? Good work! Now let's install pygame. In your terminal, type this:</p>
+                <p>So you're done, eh? Good work! Now let's install the rest. Fire up your terminal and type:</p>
 
                 <ul class="code terminal">
-                    <li>sudo apt-get install python-pygame</li>
+                    <li>sudo apt-get install python-setuptools</li>
+                    <li>sudo easy_install pi</li>
+                    <li>pip install dropbox click</li>
                 </ul>
 
-                <i>Note: If your os doesn't use apt, search for pygame in official repositories</i>
+                <i>Note: Replace apt with whatever package manager your OS uses. Also, use sudo whenever necessary</i>
 
                 <p>When its complete, in the terminal, type this:</p>
 
                 <ul class="code terminal">
-                    <li>python2.7 -c "import pygame; print pygame.version.ver"</li>
+                    <li>python -c "import dropbox, click"</li>
                 </ul>
 
-                <p>If you get something like <code>1.9.Xrelease</code> (where X is any number), then congratulations, you're all set!</p>
+                <p>If it completes without any <code>ImportError</code> then congratulations, you're all set!</p>
 
+                <p class="terminator">. . .</p>
             </div>
             <div>
                 <h2 class="noscript">Mac</h2>
@@ -150,10 +195,25 @@
                     <li>brew install python</li>
                 </ul>
 
-                <p>Finally, you can <a href="http://pygame.org/ftp/pygame-1.9.Xrelease-python.org-(where X is any number) 32bit-py2.7-macosx10.3.dmg">download</a> pygame's disk image and install it. Phew!</p>
+                <p>Finally, you can install <code>pip</code> and required libraries by doing this:</p>
 
+                <ul class="code terminal">
+                    <li>drew install pip</li>
+                    <li>pip install dropbox, click</li>
+                </ul>
+
+                <p>When its complete, in the terminal, type this:</p>
+
+                <ul class="code terminal">
+                    <li>python -c "import dropbox, click"</li>
+                </ul>
+
+                <p>If it completes without any <code>ImportError</code> then you're all done! Phew!</p>
+
+                <p class="terminator">. . .</p>
             </div>
         </div>
     </div>
     <script src="{{ STATIC_URL }}js/instructions.js"></script>
 {% endblock content %}
+

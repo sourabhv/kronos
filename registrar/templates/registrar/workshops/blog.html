@@ -77,16 +77,16 @@
                     <li><a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6.amd64.msi">Python for 64-bit</a></li>
                 </ul>
 
-                <p>Great! So you have python now. Now lets install some other things</p>
+                <p>Superb! Now that you have ruby lets proceed further and
+                install jekyll. Note: this might take a while</p>
 
-                <p>Install <code>pip</code> according to this wonderful <a href="http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows">StackOverflow Answer</a>. Then install Dropbox SDK and Click Command Line Interface Library by typing this in your terminal/command prompt</p>
 
                 <ul class="code terminal">
                     <li>gem install jekyll</li>
                 </ul>
 
                 <p>Hope that went well, and now you can move on to create your
-                jekyll site. Go ahead type in the following commands to get it
+                Jekyll site. Go ahead type in the following commands to get it
                 running.</p>
 
                 <ul class="code terminal">
@@ -98,67 +98,49 @@
                     <li>cd my-awesome site</li>
                     <li>jekyll serve</li>
                 </ul>
-                <p class="terminator">________</p>
+
+                <p>Orite! Now its time to install Git and make an account on
+                Github</p>
+                <p>Bravo! See you on the Big day. Till then cheerio!</p>
+                <p class="terminator">. . .</p>
             </div>
             <div>
                 <h2 class="noscript">Linux</h2>
                 <!--
-                So you found out about our little secret, sherlock?
+                Wonderful you found out about our little secret, sherlock?
 
-                All right! We'll help you get through this. This is going to be a little extra descriptive so hold on to your seats! We will only cover debian based distros (like Ubuntu, mint, crunchbang, etc), so if you're on any other distro, you should definately know what to do yourself ...
+                Well since you are here, lets help you get through this. We will only cover debian based distros (like Ubuntu, mint, crunchbang, etc), so if you're on any other distro, you should definitely know what to do yourself ...
 
-                Go on now, what are you waiting for? Open up your terminal!
+                Go on now, what are you waiting for? Fire up your terminal! And jot these commands.
 
-                Now type these commands in your terminal (don't copy the $)
+                    $ sudo apt-get install ruby
 
-                    $ sudo apt-get install build-essetials
+                Installing git should be fairly simple. Chances are you are already a pro at it. But for the newbies, here is how you'd install git
+                    
+                    $ sudo apt-get install git
 
-                This will install all the tools you need to build python from source on your system.
+                What about Github?
+                We believe if you don't have it yet then you should have an account there.  Simply, head here and signup - http://github.com
 
-                    $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+                Have fun!
 
-                This installs all the dependencies of python like sqlite (an ultralight database), readline (for python file interaction) etc. Now lets get python's source
-
-                    $ cd ~/Downloads
-                    $ wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tgz
-
-                Now lets extract the tarball
-
-                    $ tar -xvf Python-2.7.5.tgz
-                    $ cd Python-2.7.5
-
-                And now lets build the source (using make) and install it (using make install)
-
-                    $ ./configure
-                    $ make
-                    $ sudo make install
-
-                And now test it with this:
-
-                    $ python -c "import sys; print sys.version"
                 -->
 
-                <p>If you are using Linux (woohoo!) then you already know what to do and how to do it, so we'll leave all the work for you <span class="smiley">:) </span> But still if you get stuck somewhere, you can either try a <a href="http://lmgtfy.com/?q=how+to+install+python+on+linux" target="_blank">Google Search</a> or <code>use the source!</code> (Yes Einstein! Its a riddle)</p>
+                <p>If you are using Linux (woohoo!) then you already know what
+                to do and how to do it, so we'll leave all the work for you
+                <span class="smiley">:) </span> But still if you get stuck
+                somewhere, you can either try a <a
+                    href="http://www.google.com/" target="_blank">Google Search</a> or <code>use the source!</code> (Yes Einstein! Its a riddle)</p>
 
                 <p><center>. . .</center></p>
 
-                <p>So you're done, eh? Good work! Now let's install the rest. Fire up your terminal and type:</p>
+                <p>So you're done, eh? Good work! Now let's install the rest.  Launch your terminal again and type: **Note: this might take a while**</p>
 
                 <ul class="code terminal">
-                    <li>sudo apt-get install python-setuptools</li>
-                    <li>sudo easy_install pi</li>
-                    <li>pip install dropbox click</li>
+                    <li>sudo gem install jekyll</li>
                 </ul>
 
                 <i>Note: Replace apt with whatever package manager your OS uses. Also, use sudo whenever necessary</i>
-
-                <p>When its complete, in the terminal, type this:</p>
-
-                <ul class="code terminal">
-                    <li>python -c "import dropbox, click"</li>
-                </ul>
-
-                <p>If it completes without any <code>ImportError</code> then congratulations, you're all set!</p>
 
                 <p class="terminator">. . .</p>
             </div>

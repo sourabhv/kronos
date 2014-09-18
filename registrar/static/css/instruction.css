@@ -15,7 +15,7 @@
 }
 
 #content a {
-    color: #919191;
+    color: #666;
     text-decoration: none;
     border-bottom: 1px dotted #222;
     padding: 3px 5px;
@@ -47,16 +47,16 @@
 }
 
 #content p {
-    color: #919191;
+    color: #666;
 }
 
 #content ul li {
     font-size: 17px;
-    color: #919191;
+    color: #666;
 }
 
 #content ul li span {
-    color: #919191;
+    color: #666;
     font-style: italic;
 }
 

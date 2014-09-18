@@ -9,7 +9,7 @@
 {% block content %}
     <section>
         <h1 class="title">Blogging</h1>
-        <h2 class="subtitle">Build your own Blog using the HTML5, CSS3 & some
+        <h2 class="subtitle">Build your own Blog using the HTML5, CSS3 &amp; some
             Github Magic</h2>
         <a href="{% url "registrar:register" %}" class="register-button">Register</a>
     </section>
@@ -41,9 +41,9 @@
 
     <h3>Venue and Timings</h3>
     <ul>
-        <li>I - Block Seminar Hall</li>
+        <li>H Block Seminar Hall</li>
         <li>19 Sept, 2014</li>
-        <li>9:00 AM - 1:30 PM</li>
+        <li>9:30 AM - 2:00 PM</li>
     </ul>
 
     <p class="terminator">  </p>
@@ -53,7 +53,7 @@
 
     <div id="env-setup">
         <div id="env-options">
-            <p>Go on, choose your OS</p>
+            <p>Don't forget this part! Setting up your systems just before the workshop is not possible. Not in this case!</p>
             <div class="active">
                 <img src="{{ STATIC_URL }}images/windows.png">
                 <span>Windows</span>
@@ -62,140 +62,39 @@
                 <img src="{{ STATIC_URL }}images/linux.png">
                 <span>Linux</span>
             </div>
-            <div>
-                <img src="{{ STATIC_URL }}images/apple.png">
-                <span>Mac</span>
-            </div>
         </div>
         <div id="env-instructions">
             <div>
                 <h2 class="noscript">Windows</h2>
-                <p>We assume you are familiar with the general procedure of installing software on Windows. First off, download the binary(exe/msi) according to your architecture (32-bit or 64-bit) and install them. Don't know your architecture type? Head on to <a href="http://windows.microsoft.com/en-us/windows7/find-out-32-or-64-bit" target="_blank">Microsoft's website</a> to find out, and then come back here.</p>
 
-                <ul class="dwnld-links">
-                    <li><a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi">Python for 32-bit</a></li>
-                    <li><a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6.amd64.msi">Python for 64-bit</a></li>
-                </ul>
+                <p>We seriously recommend that you use linux, but people just won't listen. Well, what can we say, read on...</p>
 
-                <p>Superb! Now that you have ruby lets proceed further and
-                install jekyll. Note: this might take a while</p>
+                <p>Julian Thilo has written a step-by-step tutorial on how to get ruby and jekyll on windows <a href="http://jekyll-windows.juthilo.com/">here</a>. So, well leave reading it and following the instructions to you.</p>
 
+                <p>Note: On 3rd step, use rouge and skip pygments. Test everything and confirm that it works</p>
 
-                <ul class="code terminal">
-                    <li>gem install jekyll</li>
-                </ul>
-
-                <p>Hope that went well, and now you can move on to create your
-                Jekyll site. Go ahead type in the following commands to get it
-                running.</p>
-
-                <ul class="code terminal">
-                    <li>jekyll new my-awesome-site</li>
-                </ul>
-
-                <p>To see things live:</p>
-                <ul class="code terminal">
-                    <li>cd my-awesome site</li>
-                    <li>jekyll serve</li>
-                </ul>
-
-                <p>Orite! Now its time to install Git and make an account on
-                Github</p>
-                <p>Bravo! See you on the Big day. Till then cheerio!</p>
+                <p>When you're done, go ahead and install git. Goto <a href="http://msysgit.github.io">msysgit.github.io</a> and install.</p>
                 <p class="terminator">. . .</p>
             </div>
             <div>
                 <h2 class="noscript">Linux</h2>
-                <!--
-                Wonderful you found out about our little secret, sherlock?
 
-                Well since you are here, lets help you get through this. We will only cover debian based distros (like Ubuntu, mint, crunchbang, etc), so if you're on any other distro, you should definitely know what to do yourself ...
-
-                Go on now, what are you waiting for? Fire up your terminal! And jot these commands.
-
-                    $ sudo apt-get install ruby
-
-                Installing git should be fairly simple. Chances are you are already a pro at it. But for the newbies, here is how you'd install git
-                    
-                    $ sudo apt-get install git
-
-                What about Github?
-                We believe if you don't have it yet then you should have an account there.  Simply, head here and signup - http://github.com
-
-                Have fun!
-
-                -->
-
-                <p>If you are using Linux (woohoo!) then you already know what
-                to do and how to do it, so we'll leave all the work for you
-                <span class="smiley">:) </span> But still if you get stuck
-                somewhere, you can either try a <a
-                    href="http://www.google.com/" target="_blank">Google Search</a> or <code>use the source!</code> (Yes Einstein! Its a riddle)</p>
-
-                <p><center>. . .</center></p>
-
-                <p>So you're done, eh? Good work! Now let's install the rest.  Launch your terminal again and type: **Note: this might take a while**</p>
+                <p>If you just installed linux, conratulations! If you've been using linux for a long time then stop reading and go do the work yourself! So, for the newbies, open up the terminal and type in the following (except the $) and hit enter.</p>
 
                 <ul class="code terminal">
-                    <li>sudo gem install jekyll</li>
+                    <li>sudo apt-get install git ruby rubygems &amp;&amp; sudo gem install jekyll</li>
                 </ul>
 
-                <i>Note: Replace apt with whatever package manager your OS uses. Also, use sudo whenever necessary</i>
-
-                <p class="terminator">. . .</p>
-            </div>
-            <div>
-                <h2 class="noscript">Mac</h2>
-                <p>Check to see if you have python installed on your system, Open up your terminal and type,</p>
-
-                <ul class="code terminal">
-                    <li>python -c "import sys; print (sys.version)"</li>
-                </ul>
-
-                <p>If it says <code>2.7.X</code> then you have correct version of python and you can skip to end of this section and install pygame now. If it says something like <code>3.X.X</code> or gives an error, then python's missing. Read on to know how to install it.</p>
-
-                <p>You can install python by downloading disk images for <a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6-macosx10.6.dmg">x64 OSX</a> (10.6+) or <a href="https://www.python.org/ftp/python/2.7.6/python-2.7.6-macosx10.3.dmg">x86 OSX</a> (OSX 10.3+) and install it. If it works, you can skip to end of section. If if didn't work then, read on!</p>
-
-                <p>If you have <code>brew</code> installed, you can simply do <code>brew install python2.7</code> to install python. If not, lets install brew first. Before we install python, we need GCC compiler. On OSX GCC comes with a bundle called <code>XCode</code>. Check to see if you have it. If not, you can get XCode from <a href="https://developer.apple.com/xcode/downloads/" target="_blank">here</a></p>
-
-                <p>After you've installed XCode, you can install brew by running this script in terminal</p>
-
-                <ul class="code terminal">
-                    <li>ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"</li>
-                </ul>
-
-                <p>After that, open up your <code>~/.bashrc</code> in terminal and add the following line at bottom</p>
-
-                <ul class="code">
-                    <li>export PATH=/usr/local/bin:/usr/local/sbin:$PATH</li>
-                    <li>export PATH=/usr/local/share/python:$PATH</li>
-                </ul>
-
-                <p>We've added python's path in PATH variable before-hand to just reduce some work. Now finally lets install python.</p>
-
-                <ul class="code terminal">
-                    <li>brew install python</li>
-                </ul>
-
-                <p>Finally, you can install <code>pip</code> and required libraries by doing this:</p>
-
-                <ul class="code terminal">
-                    <li>drew install pip</li>
-                    <li>pip install dropbox, click</li>
-                </ul>
-
-                <p>When its complete, in the terminal, type this:</p>
-
-                <ul class="code terminal">
-                    <li>python -c "import dropbox, click"</li>
-                </ul>
-
-                <p>If it completes without any <code>ImportError</code> then you're all done! Phew!</p>
-
+                <p>Note: replace apt-get with whatever package manager your OS uses.</p>
+                <p>And that's it! Now, aren't you glad that you installed linux.</p>
                 <p class="terminator">. . .</p>
             </div>
         </div>
     </div>
+
+    <p>Now that you're done, its time to make a github account. Go to <a href="https://github.com/">github.com</a> and sign up.</p>
+    <p>That's it. Good work. We're proud of you!</p>
+
     <script src="{{ STATIC_URL }}js/instructions.js"></script>
 {% endblock content %}
 

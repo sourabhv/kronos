@@ -19,7 +19,7 @@ class Applicant(models.Model):
     registered_at     = models.DateTimeField(auto_now_add=True)
     workshop          = models.CharField(max_length=20, choices=WORKSHOPS)
     name              = models.CharField(max_length=255)
-    year              = models.CharField(max_length=1, choices=YEARS, default='1')
+    year              = models.CharField(max_length=1, choices=YEARS)
     python_experience = models.CharField(max_length=1, choices=EXPERIENCES)
     phone_number      = models.CharField(max_length=10, blank=True)
     email             = models.EmailField()

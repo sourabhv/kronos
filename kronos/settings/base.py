@@ -117,9 +117,7 @@ DJANGO_APPS = (
     'django.contrib.admin',
 )
 
-THIRD_PARTY_APPS = (
-    'south',
-)
+THIRD_PARTY_APPS = ()
 
 LOCAL_APPS = (
     'registrar',

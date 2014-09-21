@@ -20,7 +20,7 @@
                 </a>
 
                 <section class="tile-footer">
-                    <p>Build a Blog using HTML5, CSS3 & some Github magic.</p>
+                    <p>Build a Blog using HTML5, CSS3 &amp; some Github magic.</p>
                     <a href="{% url "registrar:workshop" "blog" %}">
                         <button>Join in</button>
                     </a>
@@ -57,5 +57,10 @@
                 </section>
             </li>
         </ul>
+        <div id="monitor">
+            <p class="title">~ News ~</p>
+            <p class="news"><a href="http://192.168.1.4:8000/workshop:blog/">Blogging Workshop</a> registration open! Make your own blog using HTML5 / CSS / Jekyll and some Github magic. <a href="http://192.168.1.4:8000/register/">Register Here</a>.</p>
+            <p class="news">Blog posts on <a href="/workshop:dropbox/">Dropbox Workshop</a> are available now. Read them if you missed the workshop. [<a href="http://www.sourabhverma.com/posts/dropbox-command-line-tool-1/">Part 1</a>] [<a href="http://www.sourabhverma.com/posts/dropbox-command-line-tool-2/">Part 2</a>]</p>
+        </div>
     </main>
 {% endblock content %}

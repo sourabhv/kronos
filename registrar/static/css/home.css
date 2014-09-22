@@ -108,7 +108,7 @@ figure.tile img {
     height: auto;
     position: relative;
     background-color: #31404A;
-    box-shadow: inset 0 0 10px 2px #0C1317;
+    /*box-shadow: inset 0 0 10px 2px #0C1317;*/
     border: 20px solid #474e5d;
     border-radius: 10px;
 }
@@ -116,7 +116,7 @@ figure.tile img {
 #monitor p {
     margin: 15px 0;
     font-family: 'Source Code Pro', monospace;
-    text-shadow: 0 0 2px #FFF;
+    /*text-shadow: 0 0 2px #FFF;*/
     color: #EEE;
 }
 
@@ -137,13 +137,13 @@ figure.tile img {
     position: absolute;
     margin: 0 10px;
     top: 0; left: -30px;
-    color: #00FFFF;
-    text-shadow: 0 0 2px #00FFFF;
+    color: #E67E22;
+    font-size: 22px;
 }
 #monitor .news a {
     color: #2ECC71;
     text-decoration: none;
-    text-shadow: 0 0 2px #2ECC71;
+    /*text-shadow: 0 0 2px #2ECC71;*/
     /*border-bottom: 2px dotted #2ECC71;*/
     -webkit-transition: all .25s ease-in-out;
        -moz-transition: all .25s ease-in-out;
@@ -153,8 +153,8 @@ figure.tile img {
 }
 #monitor .news a:hover,
 #monitor .news a:focus {
-    color: #00FFFF;
-    text-shadow: 0 0 2px #00FFFF;
+    color: #0CED6A;
+    text-shadow: 0 0 2px #0CED6A;
     /*border-bottom: 2px dotted #00FFFF;*/
 }
 

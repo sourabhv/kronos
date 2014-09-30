@@ -9,6 +9,10 @@ root = lambda * x: os.path.join(os.path.abspath(PROJECT_ROOT), *x)
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+# django-banish settings
+BANISH_ENABLED = True
+BANISH_EMPTY_UA = True
+
 ADMINS = (
     ('Sourabh Verma', 'sourabh.coder@gmail.com'),
     ('Shashank Srivastav', 'shashankgrovy@gmail.com'),
@@ -97,6 +101,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'banish.middleware.BanishMiddleware',
 )
 
 ROOT_URLCONF = 'kronos.urls'
@@ -117,7 +122,9 @@ DJANGO_APPS = (
     'django.contrib.admin',
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+    'banish',
+)
 
 LOCAL_APPS = (
     'registrar',

@@ -88,10 +88,18 @@
     text-align: center;
     clear: both;
 }
+#content a.register-button.disabled,
+#content a.register-button.postponed {
+    background-color: #aaa;
+}
+
+p.msg {
+    text-align: center;
+}
 
 #content div.clear {
     clear: both;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 #content code {

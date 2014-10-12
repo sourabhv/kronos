@@ -20,12 +20,17 @@
             $env_instructions.children('div').eq(id).show().siblings().hide();
         }
     })
-    
+
     var $msg = $('.msg');
-    var $msgtoggle = $('#msg-toggle');
+    var $register_buttons = $('#content a.register-button.disabled,' +
+        '#content a.register-button.postponed');
     $msg.hide();
-    $msgtoggle.on('click', function (e) {
-        $msg.animate({ opacity: "toggle"}, 1000);
-    })
-    
+
+    // disable redirect on disabled anchor buttons
+    $register_buttons.on('click', function (e) {
+        e.preventDefault();
+        $(this).nextAll('.msg').fadeIn(200);
+    });
+
+
 }) (jQuery);

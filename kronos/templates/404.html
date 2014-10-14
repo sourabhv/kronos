@@ -78,9 +78,9 @@
     <h2>to the kingdom of</h2>
     <img src="{{ STATIC_URL }}images/404.png">
     <p>We hope you enjoy your stay here!</p>
-    <p>We've arragned transport for you if you wish to travel back</p>
+    <p>Forgot your luggage?</p>
     <div id="travel">
-        <p>~ Travel Back ~</p>
+        <p>&larr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go back and get it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&larr;</p>
         <img src="{{ STATIC_URL }}images/car.png">
         <div id="border"></div>
     </div>
@@ -92,7 +92,7 @@
             $('#travel img').eq(0).animate({
                     right: len
                 }, 1500, function () {
-                    history.back(-1);
+                    window.location.href = "{% url "registrar:home" %}";
             });
         });
     </script>

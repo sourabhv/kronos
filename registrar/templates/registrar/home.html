@@ -11,6 +11,21 @@
 
     <main id="workshops">
         <ul class="grid">
+            <li id="android">
+                <a href="{% url "registrar:workshop" "android" %}">
+                    <figure class="tile">
+                        <img src="{{STATIC_URL}}/images/android.png">
+                    </figure>
+                    <p class="tile-alt">Android Workshop</p>
+                </a>
+
+                <section class="tile-footer">
+                    <p>Build an Android Game with Android Studio</p>
+                    <a href="{% url "registrar:workshop" "android" %}">
+                        <button>Join</button>
+                    </a>
+                </section>
+            </li>
             <li id="blog">
                 <a href="{% url "registrar:workshop" "blog" %}">
                     <figure class="tile">

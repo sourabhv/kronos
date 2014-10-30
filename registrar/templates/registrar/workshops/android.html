@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Android Game Development | {% endblock title %}
+
+{% block extra_header %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/instruction.css">
+{% endblock extra_header %}
+
+{% block content %}
+    <section>
+        <h1 class="title">Android Game Development</h1>
+        <h2 class="subtitle">Build an Android Game with Android Studio</h2>
+        <a href="{% url "registrar:register" %}" class="register-button">Register</a>
+        <div class="clear"></div>
+        <p class="msg">This workshop has already ended. Please, see the list of upcoming events.</p>
+    </section>
+
+    <div class="clear"></div>
+    <h3>Description</h3>
+    <p>A three day workshop where you will learn the basics of Android Studio and Android App Development. Usign this knowledge you will make your own Android Game.</p>
+
+    <h3>Content</h3>
+
+    <ul>
+        <li><span>Day One ::</span> Get work machines ready for the workshop
+        • Includes installing Android Studio, downloading any required SDKs and setup Android Phone / Emulator to test your App.</li>
+        <li><span>Day Two ::</span> Understanding the basics of Android App by making small tutorial apps</li>
+        <li><span>Day Three ::</span> Making the Android Game</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <ul>
+        <li>- Curiosity</li>
+        <li>- A Laptop with JDK &amp; Android Studio installed</li>
+    </ul>
+
+    <h3>Venue and Timings</h3>
+    <ul>
+        <li>I Block Seminar Hall</li>
+        <li>3 to 5 Nov, 2014</li>
+        <li>8:30 AM - 11:30 AM</li>
+    </ul>
+
+    <p class="terminator">  </p>
+
+    <h2 class="subtitle">Setup your Computer </h2>
+    <div class="clear"> </div>
+
+    <p class="center">-- Will be added soon --</p>
+
+<!--
+    <div id="env-setup">
+        <div id="env-options">
+            <p>Don't forget this part! Setting up your systems just before the workshop is not possible. Not in this case!</p>
+            <div class="active">
+                <img src="{{ STATIC_URL }}images/windows.png">
+                <span>Windows</span>
+            </div>
+            <div>
+                <img src="{{ STATIC_URL }}images/linux.png">
+                <span>Linux</span>
+            </div>
+        </div>
+        <div id="env-instructions">
+            <div>
+                <h2 class="noscript">Windows</h2>
+
+                <p>We seriously recommend that you use linux, but people just won't listen. Well, what can we say, read on...</p>
+
+                <p>Julian Thilo has written a step-by-step tutorial on how to get ruby and jekyll on windows <a href="http://jekyll-windows.juthilo.com/">here</a>. So, well leave reading it and following the instructions to you.</p>
+
+                <p>Note: On 3rd step, use rouge and skip pygments. Test everything and confirm that it works</p>
+
+                <p>When you're done, go ahead and install git. Goto <a href="http://msysgit.github.io">msysgit.github.io</a> and install.</p>
+                <p class="terminator">. . .</p>
+            </div>
+            <div>
+                <h2 class="noscript">Linux</h2>
+
+                <p>If you just installed linux, conratulations! If you've been using linux for a long time then stop reading and go do the work yourself! So, for the newbies, open up the terminal and type in the following (except the $) and hit enter.</p>
+
+                <ul class="code terminal">
+                    <li>sudo apt-get install git ruby rubygems &amp;&amp; sudo gem install jekyll</li>
+                </ul>
+
+                <p>Note: replace apt-get with whatever package manager your OS uses.</p>
+                <p>And that's it! Now, aren't you glad that you installed linux.</p>
+                <p class="terminator">. . .</p>
+            </div>
+        </div>
+    </div>
+
+    <p>Now that you're done, its time to make a github account. Go to <a href="https://github.com/">github.com</a> and sign up.</p>
+    <p>That's it. Good work. We're proud of you!</p>
+ -->
+
+    <script src="{{ STATIC_URL }}js/instructions.js"></script>
+{% endblock content %}

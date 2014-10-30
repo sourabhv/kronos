@@ -66,6 +66,7 @@ nav > .item:hover {
     /*color: #BADA55;*/
     border: 1px solid #777777;
 }
+.bold { font-weight: bold; }
 .clear { clear: both; }
 .heart { font-weight: bold; }
 #content {

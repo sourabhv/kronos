@@ -17,7 +17,7 @@
 
     <div class="clear"></div>
     <h3>Description</h3>
-    <p>A three day workshop where you will learn the basics of Android Studio and Android App Development. Usign this knowledge you will make your own Android Game.</p>
+    <p>A three day workshop where you will learn the basics of Android Studio and Android App Development. Using this knowledge you will make your own Android Game.</p>
 
     <h3>Content</h3>
 
@@ -48,10 +48,9 @@
 
     <p class="center">-- Will be added soon --</p>
 
-<!--
     <div id="env-setup">
         <div id="env-options">
-            <p>Don't forget this part! Setting up your systems just before the workshop is not possible. Not in this case!</p>
+            <p>Ohkay! Now setting up your development environments is a sine qua non to programming any software. Hence, even without a thought just go ahead and follow along the steps to have Android for your systems.</p>
             <div class="active">
                 <img src="{{ STATIC_URL }}images/windows.png">
                 <span>Windows</span>
@@ -65,26 +64,43 @@
             <div>
                 <h2 class="noscript">Windows</h2>
 
-                <p>We seriously recommend that you use linux, but people just won't listen. Well, what can we say, read on...</p>
+                <p>Oh! The Windows guys. 'WE' highly recommend you to switch to Linux based OSes, trust us it'll boost your productivity massively.</p>
 
-                <p>Julian Thilo has written a step-by-step tutorial on how to get ruby and jekyll on windows <a href="http://jekyll-windows.juthilo.com/">here</a>. So, well leave reading it and following the instructions to you.</p>
+                <p>Anyway, The first website you need to head to begin programming Android applications is the official <a href="http://developer.android.com/">Android</a> website.  Go on explore!</p>
 
-                <p>Note: On 3rd step, use rouge and skip pygments. Test everything and confirm that it works</p>
+                <p>You'll find a <a href="http://developer.android.com/training/index.html">Training</a> section under 'Develop'.  This should be your new home now.</p>
 
-                <p>When you're done, go ahead and install git. Goto <a href="http://msysgit.github.io">msysgit.github.io</a> and install.</p>
+                <p>Phew! Now that you know about that, lets quickly head over to <a href="https://developer.android.com/sdk/installing/studio.html">Android Developement Tools</a> page and install the latest build for <a href="https://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-windows.exe">'Windows'</a>.
+                Note: The file is quite large approx 380MB. So just wait for
+                the awesomeness to begin. :)</p>
                 <p class="terminator">. . .</p>
             </div>
             <div>
                 <h2 class="noscript">Linux</h2>
 
-                <p>If you just installed linux, conratulations! If you've been using linux for a long time then stop reading and go do the work yourself! So, for the newbies, open up the terminal and type in the following (except the $) and hit enter.</p>
+                <p>You guys are incredible if you work on Linux machines. Hi-5 on that already.</p>
+                <p>Since you are on an incredible machine you don't you figure out how to install yourself? Just grab the <a href="https://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-linux.tgz">latest build file</a> from <a href="https://developer.android.com/sdk/installing/studio.html">here</a>.</p>
 
+                <p>For the newbies, welcome and please learn how to do this process since you'll be doing it often in your life. Your downloaded file should look like this <code>Android-Studio-Bundle-135.1245622-linux.tgz</code>. Now simply do the following(make sure you're in the correct directory):</p>
                 <ul class="code terminal">
-                    <li>sudo apt-get install git ruby rubygems &amp;&amp; sudo gem install jekyll</li>
+                    <li>$ man tar #read about tarball extractions</li>
+                    <li>$ mkdir ~/bin/</li>
+                    <li>$ mv Android-Studio-Bundle-135.1245622-linux.tgz ~/bin/</li>
+                    <li>$ cd ~/bin/</li>
+                    <li>$ tar zxvf Android-Studio-Bundle-135.1245622-linux.tgz</li>
+                    <li>#this might take a while.</li>
+                    <li>$ cd android-studio</li>
                 </ul>
 
-                <p>Note: replace apt-get with whatever package manager your OS uses.</p>
-                <p>And that's it! Now, aren't you glad that you installed linux.</p>
+                <p>Now this android-studio folder is where all the files are.
+                To run android-studio from your terminal. We need to do 2
+                things: 1) make it visible in our path 2) create symbolic link
+                in /usr/bin to it</p>
+                <ul class="code terminal">
+                    <li>$ PATH=$PATH:$HOME/bin/android-studio/bin/studio.sh</li>
+                    <li>$ sudo ln -s ~/bin/android-studio/bin/studio.sh /usr/bin/studio</li>
+                </ul>
+                <p>And that's it! Don't you feel like a hacker already? :)</p>
                 <p class="terminator">. . .</p>
             </div>
         </div>

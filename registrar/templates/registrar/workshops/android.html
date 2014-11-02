@@ -46,8 +46,6 @@
     <h2 class="subtitle">Setup your Computer </h2>
     <div class="clear"> </div>
 
-    <p class="center">-- Will be added soon --</p>
-
     <div id="env-setup">
         <div id="env-options">
             <p>Ohkay! Now setting up your development environments is a sine qua non to programming any software. Hence, even without a thought just go ahead and follow along the steps to have Android for your systems.</p>
@@ -66,11 +64,13 @@
 
                 <p>Oh! The Windows guys. 'WE' highly recommend you to switch to Linux based OSes, trust us it'll boost your productivity massively.</p>
 
-                <p>Anyway, The first website you need to head to begin programming Android applications is the official <a href="http://developer.android.com/">Android</a> website.  Go on explore!</p>
+                <p>Anyway, The first website you need to head to begin programming Android applications is the official <a href="http://developer.android.com/">Android</a> website. Go on explore!</p>
 
                 <p>You'll find a <a href="http://developer.android.com/training/index.html">Training</a> section under 'Develop'.  This should be your new home now.</p>
 
-                <p>Phew! Now that you know about that, lets quickly head over to <a href="https://developer.android.com/sdk/installing/studio.html">Android Developement Tools</a> page and install the latest build for <a href="https://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-windows.exe">'Windows'</a>.
+                <p>Phew! Now that you know about that, lets quickly head over to <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">Oracle Java JDK Downloads</a> page and get the correct version for your machine and install it. Next, go set the <a href="http://stackoverflow.com/a/6521412/1812633">JAVA_HOME path</a>.</p>
+
+                <p>Now go to <a href="https://developer.android.com/sdk/installing/studio.html">Android Developement Tools</a> page and install the latest build for <a href="https://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-windows.exe">'Windows'</a>.
                 Note: The file is quite large approx 380MB. So just wait for
                 the awesomeness to begin. :)</p>
                 <p class="terminator">. . .</p>
@@ -82,14 +82,17 @@
                 <p>Since you are on an incredible machine you don't you figure out how to install yourself? Just grab the <a href="https://dl.google.com/android/studio/install/0.8.6/android-studio-bundle-135.1339820-linux.tgz">latest build file</a> from <a href="https://developer.android.com/sdk/installing/studio.html">here</a>.</p>
 
                 <p>For the newbies, welcome and please learn how to do this process since you'll be doing it often in your life. Your downloaded file should look like this <code>Android-Studio-Bundle-135.1245622-linux.tgz</code>. Now simply do the following(make sure you're in the correct directory):</p>
+
+                <p>But before you begin, first you have to install Java. We'll use OpenJDK JDK instead of Oracle JDK (Yes, its OpenJDK JDK, JDK is twice). Head over to <a href="http://stackoverflow.com/questions/14788345/how-to-install-jdk-on-ubuntu-linux">this</a> StackOverflow thread for instructions. Once you are done proceed with Android Studio installation:</p>
+
                 <ul class="code terminal">
-                    <li>$ man tar #read about tarball extractions</li>
-                    <li>$ mkdir ~/bin/</li>
-                    <li>$ mv Android-Studio-Bundle-135.1245622-linux.tgz ~/bin/</li>
-                    <li>$ cd ~/bin/</li>
-                    <li>$ tar zxvf Android-Studio-Bundle-135.1245622-linux.tgz</li>
+                    <li>man tar #read about tarball extractions</li>
+                    <li>mkdir ~/bin/</li>
+                    <li>mv Android-Studio-Bundle-135.1245622-linux.tgz ~/bin/</li>
+                    <li>cd ~/bin/</li>
+                    <li>tar zxvf Android-Studio-Bundle-135.1245622-linux.tgz</li>
                     <li>#this might take a while.</li>
-                    <li>$ cd android-studio</li>
+                    <li>cd android-studio</li>
                 </ul>
 
                 <p>Now this android-studio folder is where all the files are.
@@ -97,8 +100,8 @@
                 things: 1) make it visible in our path 2) create symbolic link
                 in /usr/bin to it</p>
                 <ul class="code terminal">
-                    <li>$ PATH=$PATH:$HOME/bin/android-studio/bin/studio.sh</li>
-                    <li>$ sudo ln -s ~/bin/android-studio/bin/studio.sh /usr/bin/studio</li>
+                    <li>PATH=$PATH:$HOME/bin/android-studio/bin/studio.sh</li>
+                    <li>sudo ln -s ~/bin/android-studio/bin/studio.sh /usr/bin/studio</li>
                 </ul>
                 <p>And that's it! Don't you feel like a hacker already? :)</p>
                 <p class="terminator">. . .</p>
@@ -108,7 +111,6 @@
 
     <p>Now that you're done, its time to make a github account. Go to <a href="https://github.com/">github.com</a> and sign up.</p>
     <p>That's it. Good work. We're proud of you!</p>
- -->
 
     <script src="{{ STATIC_URL }}js/instructions.js"></script>
 {% endblock content %}
